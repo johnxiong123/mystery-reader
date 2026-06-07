@@ -2,6 +2,12 @@
 
 本地全栈悬疑小说阅读器：导入 txt/epub 后，后端在导入阶段调用 OpenAI 兼容接口抽取人物、关系与事件，阅读阶段只从本地 SQLite 读取并按当前章节服务端防剧透过滤。
 
+## 下载安装
+
+macOS 用户可直接下载 DMG 安装包，无需安装 Node 或任何命令行工具：
+
+👉 **[下载 Mystery Reader (macOS DMG)](https://github.com/johnxiong123/mystery-reader/releases)**
+
 ## 启动
 
 ```bash

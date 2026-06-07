@@ -19,7 +19,7 @@ const tabs = [
   { id: "characters", label: "人物卷宗" }
 ];
 
-export default function Reader({ bookId, onBack }) {
+export default function Reader({ bookId, onBack, nightMode, onNightModeChange }) {
   const mainRef = useRef(null);
   const [book, setBook] = useState(null);
   const [chapter, setChapter] = useState(null);
@@ -31,7 +31,6 @@ export default function Reader({ bookId, onBack }) {
   const [sidePanelOpen, setSidePanelOpen] = useState(true);
   const [readerSplit, setReaderSplit] = useState(READER_SPLIT_DEFAULT);
   const [resizing, setResizing] = useState(false);
-  const [nightMode, setNightMode] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [aiSettingsOpen, setAiSettingsOpen] = useState(false);
@@ -323,7 +322,7 @@ export default function Reader({ bookId, onBack }) {
           currentChapter={currentChapter}
           onChangeChapter={changeChapter}
           nightMode={nightMode}
-          onNightModeChange={setNightMode}
+          onNightModeChange={onNightModeChange}
         />
 
         {sidePanelOpen && (

@@ -63,7 +63,7 @@ function themeFor(index) {
 // 一次最多渲染到中心两侧各 4 本，避免书很多时 DOM 过大。
 const VISIBLE = 4;
 
-export default function Library({ books, loading, error, onRefresh, onOpenBook }) {
+export default function Library({ books, loading, error, onRefresh, onOpenBook, nightMode }) {
   const inputRef = useRef(null);
   const stageRef = useRef(null);
   const dragRef = useRef(null);
@@ -363,7 +363,7 @@ export default function Library({ books, loading, error, onRefresh, onOpenBook }
   }
 
   return (
-    <div className="min-h-screen overflow-hidden bg-[#f6f3ec] text-[#3b2630]">
+    <div className={`min-h-screen overflow-hidden ${nightMode ? "bg-[#1a1510] text-[#ece2cd]" : "bg-[#f6f3ec] text-[#3b2630]"}`}>
       <header className="flex h-14 items-center justify-between px-5">
         <div className="flex items-center gap-4">
           <div className="grid h-9 w-9 place-items-center rounded-md bg-[#5a2b1f] text-white">
@@ -446,7 +446,7 @@ export default function Library({ books, loading, error, onRefresh, onOpenBook }
                     <span className="cf-title">添加一本新书</span>
                     <span className="cf-author">支持 EPUB / TXT</span>
                   </button>
-                  <p className="cf-empty-hint">导入你的第一本悬疑小说，AI 会自动梳理人物关系和时间线。<br/>读到哪，看到哪，绝不剧透。</p>
+                  <p className={`cf-empty-hint ${nightMode ? "text-[#b6a384]" : "text-[#765d57]"}`}>导入你的第一本悬疑小说，AI 会自动梳理人物关系和时间线。<br/>读到哪，看到哪，绝不剧透。</p>
                 </div>
               ) : (
                 <>

@@ -8,6 +8,7 @@ export default function App() {
   const [activeBookId, setActiveBookId] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [nightMode, setNightMode] = useState(false);
 
   const loadBooks = useCallback(async () => {
     try {
@@ -29,6 +30,8 @@ export default function App() {
     return (
       <Reader
         bookId={activeBookId}
+        nightMode={nightMode}
+        onNightModeChange={setNightMode}
         onBack={() => {
           setActiveBookId(null);
           loadBooks();
@@ -42,6 +45,7 @@ export default function App() {
       books={books}
       loading={loading}
       error={error}
+      nightMode={nightMode}
       onRefresh={loadBooks}
       onOpenBook={setActiveBookId}
     />

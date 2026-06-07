@@ -57,6 +57,10 @@ export const api = {
       method: "PUT",
       body: JSON.stringify({ current_chapter: currentChapter })
     }),
+  reExtractChapter: (bookId, chapterIdx) =>
+    fetchJson(`/books/${bookId}/chapters/${chapterIdx}/reextract`, { method: "POST" }),
+  reExtractBook: (bookId) =>
+    fetchJson(`/books/${bookId}/reextract`, { method: "POST" }),
   importBook: (file, handlers = {}) => {
     const formData = new FormData();
     formData.append("file", file);

@@ -3,6 +3,7 @@ import { api } from "../api.js";
 import CharacterList from "../components/CharacterList.jsx";
 import DossierCard from "../components/DossierCard.jsx";
 import GraphView from "../components/GraphView.jsx";
+import AiSettingsDialog from "../components/AiSettingsDialog.jsx";
 import ReaderPane from "../components/ReaderPane.jsx";
 import TimelineView from "../components/TimelineView.jsx";
 import {
@@ -33,6 +34,10 @@ export default function Reader({ bookId, onBack }) {
   const [nightMode, setNightMode] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [aiSettingsOpen, setAiSettingsOpen] = useState(false);
+  const [aiSettings, setAiSettings] = useState(null);
+  const [settingsSaving, setSettingsSaving] = useState(false);
+  const [settingsError, setSettingsError] = useState("");
 
   const loadBook = useCallback(async () => {
     const nextBook = await api.book(bookId);
@@ -46,6 +51,46 @@ export default function Reader({ bookId, onBack }) {
       .catch((requestError) => setError(requestError.message))
       .finally(() => setLoading(false));
   }, [loadBook]);
+
+  const loadAiSettings = useCallback(async () => {
+    try {
+      const nextSettings = await api.aiSettings();
+      setAiSettings(nextSettings);
+      setSettingsError("");
+    } catch (requestError) {
+      setSettingsError(requestError.message);
+    }
+  }, []);
+
+  useEffect(() => { loadAiSettings(); }, [loadAiSettings]);
+
+  async function saveAiSettings(payload) {
+    setSettingsSaving(true);
+    try {
+      const saved = await api.updateAiSettings(payload);
+      setAiSettings(saved);
+      setSettingsError("");
+      if (saved.configured && isPendingConfig) {
+        setAiSettingsOpen(false);
+        handleReExtract();
+      }
+      return saved;
+    } catch (requestError) {
+      setSettingsError(requestError.message);
+      return null;
+    } finally {
+      setSettingsSaving(false);
+    }
+  }
+
+  async function handleReExtract() {
+    try {
+      await api.reExtractBook(bookId);
+      await loadBook();
+    } catch (requestError) {
+      setError(requestError.message);
+    }
+  }
 
   const loadChapterContext = useCallback(
     async (chapterIdx) => {
@@ -184,10 +229,49 @@ export default function Reader({ bookId, onBack }) {
 
   const panelDark = nightMode;
   const tabBorder = panelDark ? "border-[#3a2f22]" : "border-line";
-  const graphEmptyDescription =
-    book?.import_status === "pending_config"
-      ? "本书已完成章节导入。配置 API Key 后，可以重新解析人物关系与事件。"
-      : "AI 可能仍在分析，或这些人物关系尚未在当前阅读进度揭露。";
+  const isPendingConfig = book?.import_status === "pending_config";
+  const isError = book?.import_status === "error";
+
+  function graphEmptyContent() {
+    if (isPendingConfig) {
+      return (
+        <>
+          <p className="mb-3">本书已完成章节导入。配置 API Key 后即可解析人物关系与事件。</p>
+          <button
+            type="button"
+            onClick={() => setAiSettingsOpen(true)}
+            className="rounded-md bg-[#6b2f1e] px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-[#8a3c26]"
+          >
+            🔑 配置 API Key 开始解析
+          </button>
+        </>
+      );
+    }
+    if (isError) {
+      return (
+        <>
+          <p className="mb-3">部分章节解析失败。配置 API Key 后可重新解析。</p>
+          <div className="flex gap-2">
+            <button
+              type="button"
+              onClick={() => setAiSettingsOpen(true)}
+              className="rounded-md border border-[#d4bdb0] bg-white/60 px-4 py-2 text-sm font-semibold text-[#5c3c4b] transition hover:border-[#6b2f1e]"
+            >
+              ⚙ 检查 Key 配置
+            </button>
+            <button
+              type="button"
+              onClick={handleReExtract}
+              className="rounded-md bg-[#6b2f1e] px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-[#8a3c26]"
+            >
+              🔄 重新解析
+            </button>
+          </div>
+        </>
+      );
+    }
+    return <p>AI 可能仍在分析，或这些人物关系尚未在当前阅读进度揭露。</p>;
+  }
 
   return (
     <div className={`flex min-h-screen flex-col lg:h-screen lg:overflow-hidden ${panelDark ? "casefile-dark text-[#ece2cd]" : "casefile-bg text-ink"}`}>
@@ -219,7 +303,7 @@ export default function Reader({ bookId, onBack }) {
               panelDark ? "border-[#3a2f22] bg-[#2a2219] text-[#ece2cd]" : "border-line bg-card text-ink"
             }`}
           >
-            {sidePanelOpen ? "纯阅读" : "打开线索板"}
+            {sidePanelOpen ? "全屏阅读" : "显示线索板"}
           </button>
         </div>
       </header>
@@ -303,7 +387,7 @@ export default function Reader({ bookId, onBack }) {
                       selectedCharacterId={selectedCharacterId}
                       onSelectCharacter={setSelectedCharacterId}
                       nightMode={nightMode}
-                      emptyDescription={graphEmptyDescription}
+                      emptyDescription={graphEmptyContent()}
                     />
                   )}
                   {activeTab === "timeline" && <TimelineView events={timeline} nightMode={nightMode} />}
@@ -329,6 +413,15 @@ export default function Reader({ bookId, onBack }) {
           </>
         )}
       </main>
+
+      <AiSettingsDialog
+        open={aiSettingsOpen}
+        settings={aiSettings}
+        saving={settingsSaving}
+        error={settingsError}
+        onClose={() => setAiSettingsOpen(false)}
+        onSave={saveAiSettings}
+      />
     </div>
   );
 }

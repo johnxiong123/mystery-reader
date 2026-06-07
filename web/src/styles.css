@@ -379,6 +379,21 @@ textarea {
   text-shadow: none;
 }
 
+.cf-empty-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.cf-empty-hint {
+  font-size: 0.88rem;
+  color: #765d57;
+  text-align: center;
+  line-height: 1.7;
+  max-width: 320px;
+}
+
 .cf-hint {
   position: absolute;
   left: 50%;

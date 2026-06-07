@@ -3,17 +3,13 @@ import { api, openImportProgress } from "../api.js";
 import AiSettingsDialog from "../components/AiSettingsDialog.jsx";
 import ImportProgress from "../components/ImportProgress.jsx";
 
-function formatStatus(status) {
+function formatStatus(book) {
+  const status = book.import_status;
   if (status === "done") return "分析完成";
   if (status === "error") return "导入异常";
-  if (status === "extracting") return "分析中";
+  if (status === "extracting") return `分析中 · 第 ${book.analyzed_chapters || 0}/${book.total_chapters || 0} 章`;
   if (status === "pending_config") return "待配置 Key";
   return "待解析";
-}
-
-function progressPercent(book) {
-  if (!book.total_chapters) return 0;
-  return Math.round((book.analyzed_chapters / book.total_chapters) * 100);
 }
 
 function clamp(value, lo, hi) {
@@ -440,15 +436,18 @@ export default function Library({ books, loading, error, onRefresh, onOpenBook }
               aria-label="书架"
             >
               {count === 0 ? (
-                <button
-                  type="button"
-                  onClick={() => inputRef.current?.click()}
-                  className="cf-empty"
-                >
-                  <span className="cf-kicker">LOCAL</span>
-                  <span className="cf-title">添加一本新书</span>
-                  <span className="cf-author">支持 EPUB / TXT</span>
-                </button>
+                <div className="cf-empty-wrapper">
+                  <button
+                    type="button"
+                    onClick={() => inputRef.current?.click()}
+                    className="cf-empty"
+                  >
+                    <span className="cf-kicker">LOCAL</span>
+                    <span className="cf-title">添加一本新书</span>
+                    <span className="cf-author">支持 EPUB / TXT</span>
+                  </button>
+                  <p className="cf-empty-hint">导入你的第一本悬疑小说，AI 会自动梳理人物关系和时间线。<br/>读到哪，看到哪，绝不剧透。</p>
+                </div>
               ) : (
                 <>
                   {filteredBooks.map((book, index) => {
@@ -491,7 +490,7 @@ export default function Library({ books, loading, error, onRefresh, onOpenBook }
                           {book.author || "未知作者"}
                         </span>
                         <span className="cf-meta" style={{ opacity: detail }}>
-                          {formatStatus(book.import_status)} · {book.total_chapters || 0}章 · {progressPercent(book)}%
+                          {formatStatus(book)}
                         </span>
                       </button>
                     );

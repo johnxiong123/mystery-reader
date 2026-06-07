@@ -176,6 +176,18 @@ export async function registerBookRoutes(app, { db, config, extractor, settingsS
     }
     return { ok };
   });
+
+  app.post('/api/books/:id/reextract', async (request) => {
+    const id = numberParam(request.params.id, 'id');
+    ensureBook(db, id);
+    db.prepare('UPDATE chapters SET extract_status = ? WHERE book_id = ?').run('pending', id);
+    db.prepare('UPDATE books SET import_status = ?, analyzed_chapters = 0 WHERE id = ?').run('extracting', id);
+    extractor.extractBook(id).catch((error) => {
+      request.log.error({ err: error, bookId: id }, 'reextract failed');
+      db.prepare('UPDATE books SET import_status = ? WHERE id = ?').run('error', id);
+    });
+    return { ok: true };
+  });
 }
 
 function ensureBook(db, id) {

@@ -8,6 +8,20 @@ macOS 用户可直接下载 DMG 安装包，无需安装 Node 或任何命令行
 
 👉 **[下载 Mystery Reader (macOS DMG)](https://github.com/johnxiong123/mystery-reader/releases)**
 
+## 功能介绍
+
+| 功能 | 说明 | 截图 |
+|------|------|------|
+| 📚 **3D 书架** | Coverflow 轮播书架，拖拽/滚轮/方向键浏览，支持搜索 | ![书架](./screenshots/library.png) |
+| 🔍 **AI 智能抽取** | 导入 TXT/EPUB 后 AI 逐章抽取人物、关系、事件，实时进度 | ![导入](./screenshots/import.png) |
+| 📖 **沉浸阅读** | 左侧正文 + 右侧关系图分栏，字号调节 + 夜间模式 | ![阅读](./screenshots/reader.png) |
+| 🗺️ **人物关系图** | Canvas 2D 力导向图，按阅读进度生长，揭露动画高亮 | ![关系图](./screenshots/graph.png) |
+| ⏱️ **事件时间线** | 事件按发生时间排列，倒叙事件特别标注 | ![时间线](./screenshots/timeline.png) |
+| 👤 **人物档案卡** | 点击节点查看人物详情、关联关系、参与事件 | ![档案卡](./screenshots/dossier.png) |
+| 🔒 **防剧透** | 所有数据服务端按章节过滤，没读到的绝不泄露 | - |
+
+> 💡 截图请放到 `screenshots/` 目录下，替换上面的占位路径即可。
+
 ## 启动
 
 ```bash

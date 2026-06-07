@@ -22,6 +22,53 @@ macOS 用户可直接下载 DMG 安装包，无需安装 Node 或任何命令行
 
 > 💡 截图请放到 `screenshots/` 目录下，替换上面的占位路径即可。
 
+## 使用说明
+
+### 两种使用模式
+
+| 模式 | 有 API Key | 无 API Key |
+|------|-----------|-----------|
+| 书架浏览 | ✅ | ✅ |
+| 阅读正文 | ✅ | ✅ |
+| AI 解析人物/关系/事件 | ✅ | ❌ |
+| 关系图 / 时间线 / 档案卡 | ✅ | ❌ |
+
+- **完整模式**：配置 API Key 后导入书籍，AI 逐章自动提取人物、关系、事件。阅读时右侧面板显示关系图、时间线和档案卡。
+- **纯阅读模式**：不配 API Key 也能用 —— 浏览书架、打开书籍看正文，只是没有 AI 解析和可视化面板。
+
+### 配置 API Key
+
+**方式一：配置文件（适合 `npm start` 用户）**
+
+```bash
+cp .env.example .env
+```
+
+编辑 `.env`，填入你的 Key：
+
+```bash
+AI_API_KEY=sk-your-key-here
+AI_BASE_URL=https://api.openai.com/v1
+AI_MODEL=gpt-4o-mini
+```
+
+DeepSeek 用户示例：
+
+```bash
+AI_BASE_URL=https://api.deepseek.com
+AI_MODEL=deepseek-chat
+```
+
+**方式二：应用内设置（适合 DMG 用户）**
+
+打开应用后，点击右上角「设置」按钮，在弹出的对话框中填写 API Key 和 Base URL，保存即生效。
+
+### 注意事项
+
+- 🔐 API Key **只存本地**，不会上传到任何服务器。前端代码和日志中不会出现 Key。
+- 💰 AI 仅在**导入书籍时**调用，阅读阶段零 API 请求，不消耗额外 token。
+- 🌐 支持所有兼容 OpenAI SDK 接口的服务商（OpenAI / DeepSeek / Moonshot / 通义千问 等）。
+
 ## 启动
 
 ```bash

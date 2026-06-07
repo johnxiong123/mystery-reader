@@ -1,0 +1,29 @@
+# 环境变量（含 API Key）
+.env
+
+# 用户数据
+data/
+uploads/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+settings.json
+outputs/
+
+# 依赖
+node_modules/
+
+# 构建产物
+web/dist/
+dist/
+
+# macOS 打包产物
+mac/
+
+# Obsidian / 其他工具
+.obsidian/
+.playwright-cli/
+
+# 系统文件
+.DS_Store
+Thumbs.db

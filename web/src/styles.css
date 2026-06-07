@@ -1,0 +1,408 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #14161a;
+  background: #f7f8fa;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #f7f8fa;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.reader-text {
+  font-family: "Noto Serif SC", "Songti SC", "SimSun", Georgia, serif;
+  line-height: 2.05;
+}
+
+.reader-workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.reader-resizer {
+  position: relative;
+  min-width: 10px;
+  height: 100%;
+  cursor: col-resize;
+  touch-action: none;
+  align-items: stretch;
+  justify-content: center;
+  border: 0;
+  border-left: 1px solid rgba(78, 58, 36, 0.2);
+  border-right: 1px solid rgba(78, 58, 36, 0.18);
+  background: linear-gradient(90deg, rgba(150, 118, 72, 0.18), rgba(255, 255, 255, 0.3), rgba(150, 118, 72, 0.18));
+  padding: 0;
+}
+
+.reader-resizer span {
+  width: 2px;
+  height: 54px;
+  align-self: center;
+  border-radius: 999px;
+  background: rgba(107, 47, 30, 0.42);
+  box-shadow: 0 9px 0 rgba(107, 47, 30, 0.24), 0 -9px 0 rgba(107, 47, 30, 0.24);
+}
+
+.reader-resizer:hover,
+.reader-workspace-resizing .reader-resizer {
+  background: linear-gradient(90deg, rgba(163, 48, 42, 0.18), rgba(255, 255, 255, 0.38), rgba(163, 48, 42, 0.18));
+}
+
+.reader-resizer-dark {
+  border-left-color: rgba(220, 200, 160, 0.16);
+  border-right-color: rgba(220, 200, 160, 0.12);
+  background: linear-gradient(90deg, rgba(80, 56, 30, 0.38), rgba(42, 34, 25, 0.8), rgba(80, 56, 30, 0.38));
+}
+
+.reader-resizer-dark span {
+  background: rgba(232, 206, 160, 0.42);
+  box-shadow: 0 9px 0 rgba(232, 206, 160, 0.22), 0 -9px 0 rgba(232, 206, 160, 0.22);
+}
+
+@media (min-width: 1024px) {
+  .reader-workspace {
+    overflow: hidden;
+  }
+
+  .reader-workspace-open {
+    grid-template-columns: minmax(360px, var(--reader-left, 48%)) 10px minmax(340px, 1fr);
+  }
+
+  .reader-workspace-closed {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .reader-workspace-resizing {
+    user-select: none;
+  }
+}
+
+/* ---------- 复古侦探案卷主题 ---------- */
+
+/* 牛皮纸/案卷背景 */
+.casefile-bg {
+  background-color: #efe5cf;
+  background-image:
+    radial-gradient(circle at 18% 0%, rgba(160, 120, 60, 0.1), transparent 42%),
+    radial-gradient(circle at 100% 100%, rgba(120, 90, 40, 0.08), transparent 46%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+}
+
+.casefile-dark {
+  background-color: #1d1812;
+  background-image:
+    radial-gradient(circle at 20% 0%, rgba(120, 86, 40, 0.16), transparent 46%),
+    radial-gradient(circle at 100% 100%, rgba(60, 42, 20, 0.5), transparent 52%);
+}
+
+/* 仿书页纸张 */
+.paper-sheet {
+  background-color: #fbf6ea;
+  background-image:
+    linear-gradient(180deg, rgba(80, 55, 18, 0.05), transparent 6%),
+    repeating-linear-gradient(0deg, rgba(90, 64, 22, 0.022) 0 1px, transparent 1px 30px);
+  box-shadow: inset 0 0 90px rgba(90, 62, 24, 0.09);
+}
+
+.paper-sheet-dark {
+  background-color: #221d16;
+  background-image: repeating-linear-gradient(0deg, rgba(220, 200, 160, 0.03) 0 1px, transparent 1px 30px);
+}
+
+/* 印章标签 */
+.stamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  border: 2px solid currentColor;
+  border-radius: 4px;
+  padding: 0.08em 0.5em;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  transform: rotate(-3.5deg);
+  opacity: 0.9;
+}
+
+/* 图钉 */
+.pin {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 34% 28%, #ec8b84, #b0342a 58%, #7c211c);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4), inset 0 -2px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* 胶带 */
+.tape {
+  position: absolute;
+  height: 24px;
+  width: 86px;
+  background: rgba(214, 196, 150, 0.5);
+  border-left: 1px dashed rgba(60, 40, 10, 0.12);
+  border-right: 1px dashed rgba(60, 40, 10, 0.12);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+}
+
+/* 红线（时间线主干） */
+.redstring {
+  background-image: repeating-linear-gradient(180deg, #b0342a 0 7px, #97231c 7px 9px);
+}
+
+/* 卷边（翻折的旧纸角） */
+.aged,
+.aged-d {
+  position: relative;
+}
+
+.aged::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  bottom: -1px;
+  width: 22px;
+  height: 22px;
+  background: linear-gradient(135deg, transparent 45%, rgba(90, 62, 24, 0.32) 49%, #f0e3c6 53%);
+  border-bottom-right-radius: 5px;
+  box-shadow: -2px -2px 6px rgba(70, 48, 18, 0.22);
+  pointer-events: none;
+}
+
+.aged-d::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  bottom: -1px;
+  width: 22px;
+  height: 22px;
+  background: linear-gradient(135deg, transparent 45%, rgba(0, 0, 0, 0.45) 49%, #3a3020 53%);
+  border-bottom-right-radius: 5px;
+  box-shadow: -2px -2px 6px rgba(0, 0, 0, 0.32);
+  pointer-events: none;
+}
+
+/* 文件夹标签按钮 */
+.folder-tab {
+  position: relative;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* ---------- 3D 书架（coverflow，真实数量 + 跟手拖动） ---------- */
+
+.coverflow {
+  position: relative;
+  width: 100%;
+  min-height: clamp(360px, 46vh, 540px);
+  perspective: 1600px;
+  transform-style: preserve-3d;
+  outline: none;
+  cursor: grab;
+  user-select: none;
+  touch-action: pan-y;
+}
+
+.coverflow:active {
+  cursor: grabbing;
+}
+
+.coverflow::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: clamp(16px, 5vh, 58px);
+  width: min(68%, 520px);
+  height: 30px;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse at center, rgba(73, 44, 34, 0.22), rgba(73, 44, 34, 0.06) 45%, transparent 72%);
+  filter: blur(11px);
+  pointer-events: none;
+}
+
+.cf-item {
+  --cover: #9b4432;
+  --spine: #773325;
+  --fore: #fff3df;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  display: flex;
+  width: clamp(168px, 17vw, 244px);
+  aspect-ratio: 0.68;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  border: 0;
+  border-radius: 3px;
+  padding: clamp(20px, 2.4vw, 34px) clamp(16px, 2vw, 26px);
+  color: var(--fore);
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.34) 0 6%, transparent 6%),
+    radial-gradient(circle at 50% 26%, rgba(255, 255, 255, 0.16), transparent 30%),
+    linear-gradient(150deg, color-mix(in srgb, var(--cover), white 10%), var(--spine));
+  box-shadow:
+    inset 11px 0 0 rgba(0, 0, 0, 0.2),
+    inset -2px 0 0 rgba(255, 255, 255, 0.07),
+    0 24px 48px rgba(55, 33, 25, 0.28);
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+  transition:
+    transform 520ms cubic-bezier(0.22, 0.8, 0.28, 1),
+    opacity 360ms ease,
+    box-shadow 360ms ease;
+  will-change: transform, opacity;
+  cursor: pointer;
+}
+
+.coverflow.dragging .cf-item {
+  transition: none;
+}
+
+.cf-item::before {
+  content: "";
+  position: absolute;
+  inset: 12px 14px;
+  border: 1px solid rgba(255, 244, 222, 0.42);
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.cf-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 6px);
+  mix-blend-mode: screen;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.cf-center {
+  box-shadow:
+    inset 11px 0 0 rgba(0, 0, 0, 0.18),
+    inset -2px 0 0 rgba(255, 255, 255, 0.09),
+    0 34px 66px rgba(55, 33, 25, 0.36);
+}
+
+.cf-kicker,
+.cf-title,
+.cf-author,
+.cf-meta {
+  position: relative;
+  z-index: 1;
+}
+
+.cf-kicker {
+  text-transform: uppercase;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  opacity: 0.78;
+}
+
+.cf-title {
+  margin-top: auto;
+  max-width: 100%;
+  max-height: 6.4rem;
+  overflow: hidden;
+  font-family: "Noto Serif SC", "Songti SC", "SimSun", Georgia, serif;
+  font-size: clamp(1.15rem, 1.5vw, 1.7rem);
+  font-weight: 760;
+  line-height: 1.16;
+  text-align: center;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.cf-author {
+  margin-top: 0.55rem;
+  font-size: 0.84rem;
+  opacity: 0.8;
+}
+
+.cf-meta {
+  margin-top: 0.7rem;
+  border-top: 1px solid rgba(255, 244, 222, 0.32);
+  padding-top: 0.55rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+  opacity: 0.82;
+}
+
+.cf-empty {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  width: clamp(180px, 18vw, 250px);
+  aspect-ratio: 0.68;
+  padding: 24px;
+  border: 1px dashed rgba(107, 47, 30, 0.45);
+  border-radius: 3px;
+  color: #6b2f1e;
+  background: linear-gradient(150deg, #fff9ef, #eee4d6);
+  text-align: center;
+  cursor: pointer;
+}
+
+.cf-empty .cf-title {
+  margin-top: 0;
+  color: #6b2f1e;
+  text-shadow: none;
+}
+
+.cf-hint {
+  position: absolute;
+  left: 50%;
+  bottom: clamp(2px, 1.5vh, 14px);
+  transform: translateX(-50%);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: #9a8378;
+  pointer-events: none;
+}
+
+@media (max-width: 560px) {
+  .coverflow {
+    min-height: 340px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "mystery-reader",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "server",
+    "web"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev -w server\" \"npm run dev -w web\"",
+    "start": "npm run build -w web && npm run start -w server",
+    "test": "npm run test -w server",
+    "smoke:real": "node scripts/realImportSmoke.js",
+    "chapter:probe": "node scripts/probeChapterSplit.js",
+    "package:mac": "node scripts/packageMacDmg.js"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

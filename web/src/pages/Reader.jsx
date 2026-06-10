@@ -9,6 +9,8 @@ import TimelineView from "../components/TimelineView.jsx";
 import TocDrawer from "../components/TocDrawer.jsx";
 import SearchPanel from "../components/SearchPanel.jsx";
 import BookmarkPanel from "../components/BookmarkPanel.jsx";
+import SelectionDossier from "../components/SelectionDossier.jsx";
+import { buildLookup, matchSelection } from "../selectionLookup.js";
 import {
   READER_SPLIT_DEFAULT,
   READER_SPLIT_MAX,
@@ -37,6 +39,10 @@ export default function Reader({ bookId, onBack, nightMode, onNightModeChange })
   const [searchOpen, setSearchOpen] = useState(false);
   const [bookmarks, setBookmarks] = useState([]);
   const [bookmarkOpen, setBookmarkOpen] = useState(false);
+  const [selectionHit, setSelectionHit] = useState(null);
+  const [hintDismissed, setHintDismissed] = useState(
+    () => typeof localStorage !== "undefined" && localStorage.getItem("mr-selection-hint") === "1"
+  );
   const [activeTab, setActiveTab] = useState("graph");
   const [selectedCharacterId, setSelectedCharacterId] = useState(null);
   const [sidePanelOpen, setSidePanelOpen] = useState(true);
@@ -178,6 +184,17 @@ export default function Reader({ bookId, onBack, nightMode, onNightModeChange })
     () => new Set(bookmarks.map((bookmark) => bookmark.chapter_idx)),
     [bookmarks]
   );
+
+  const lookup = useMemo(() => buildLookup(graph.nodes), [graph.nodes]);
+
+  function handleTextSelect(text, anchor) {
+    const hit = matchSelection(text, lookup);
+    if (hit) {
+      setSelectionHit({ character: hit, miss: null, anchor });
+    } else if (text.trim().length > 0 && text.trim().length <= 12) {
+      setSelectionHit({ character: null, miss: "未找到该人物", anchor });
+    }
+  }
 
   const loadBookmarks = useCallback(async () => {
     try { setBookmarks(await api.bookmarks(bookId)); } catch { /* 列表失败不阻塞阅读 */ }
@@ -388,6 +405,21 @@ export default function Reader({ bookId, onBack, nightMode, onNightModeChange })
         <div className="shrink-0 border-b border-red-300 bg-red-50 px-5 py-2 text-sm text-red-700">{error}</div>
       )}
 
+      {!hintDismissed && (
+        <div className={`flex shrink-0 items-center justify-between border-b px-5 py-2 text-sm ${
+          nightMode ? "border-[#3a2f22] bg-[#2a2219] text-[#b6a384]" : "border-line bg-card text-steel"
+        }`}>
+          <span>💡 选中正文中的人名，可就地查看人物档案。</span>
+          <button
+            type="button"
+            onClick={() => { localStorage.setItem("mr-selection-hint", "1"); setHintDismissed(true); }}
+            className="px-2 font-semibold hover:text-noir"
+          >
+            知道了
+          </button>
+        </div>
+      )}
+
       <main
         ref={mainRef}
         className={`reader-workspace min-h-0 flex-1 ${sidePanelOpen ? "reader-workspace-open" : "reader-workspace-closed"} ${resizing ? "reader-workspace-resizing" : ""}`}
@@ -402,6 +434,7 @@ export default function Reader({ bookId, onBack, nightMode, onNightModeChange })
           onOpenToc={() => setTocOpen(true)}
           onOpenSearch={() => setSearchOpen(true)}
           onOpenBookmarks={() => setBookmarkOpen(true)}
+          onTextSelect={handleTextSelect}
           articleRef={articleRef}
           nightMode={nightMode}
           onNightModeChange={onNightModeChange}
@@ -522,6 +555,17 @@ export default function Reader({ bookId, onBack, nightMode, onNightModeChange })
         onJump={jumpToBookmark}
         onDelete={async (bookmarkId) => { await api.deleteBookmark(bookId, bookmarkId); await loadBookmarks(); }}
         onClose={() => setBookmarkOpen(false)}
+        nightMode={nightMode}
+      />
+
+      <SelectionDossier
+        bookId={bookId}
+        character={selectionHit?.character || null}
+        miss={selectionHit?.miss || null}
+        anchor={selectionHit?.anchor || null}
+        currentChapter={currentChapter}
+        onOpenFull={(charId) => { setSidePanelOpen(true); setSelectedCharacterId(charId); }}
+        onClose={() => setSelectionHit(null)}
         nightMode={nightMode}
       />
 

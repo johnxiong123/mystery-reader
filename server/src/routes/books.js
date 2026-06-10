@@ -77,8 +77,12 @@ export async function registerBookRoutes(app, { db, config, extractor, settingsS
     const id = numberParam(request.params.id, 'id');
     const book = db.prepare('SELECT * FROM books WHERE id = ?').get(id);
     if (!book) throw notFound('书籍不存在。');
-    const progress = db.prepare('SELECT current_chapter FROM reading_progress WHERE book_id = ?').get(id);
-    return { ...book, current_chapter: progress?.current_chapter ?? 0 };
+    const progress = db.prepare('SELECT current_chapter, furthest_chapter FROM reading_progress WHERE book_id = ?').get(id);
+    return {
+      ...book,
+      current_chapter: progress?.current_chapter ?? 0,
+      furthest_chapter: progress?.furthest_chapter ?? 0
+    };
   });
 
   app.delete('/api/books/:id', async (request) => {
@@ -140,8 +144,10 @@ export async function registerBookRoutes(app, { db, config, extractor, settingsS
   app.get('/api/books/:id/progress', async (request) => {
     const id = numberParam(request.params.id, 'id');
     ensureBook(db, id);
-    const row = db.prepare('SELECT current_chapter FROM reading_progress WHERE book_id = ?').get(id);
-    return { current_chapter: row?.current_chapter ?? 0 };
+    const row = db.prepare('SELECT current_chapter, furthest_chapter FROM reading_progress WHERE book_id = ?').get(id);
+    const current = row?.current_chapter ?? 0;
+    const furthest = row?.furthest_chapter ?? 0;
+    return { current_chapter: current, furthest_chapter: furthest, percent: computePercent(db, id, furthest) };
   });
 
   app.put('/api/books/:id/progress', async (request) => {
@@ -151,11 +157,15 @@ export async function registerBookRoutes(app, { db, config, extractor, settingsS
     if (!Number.isInteger(requested)) throw badRequest('current_chapter 必须是整数。');
     const current = Math.max(0, Math.min(requested, book.total_chapters - 1));
     db.prepare(`
-      INSERT INTO reading_progress (book_id, current_chapter, updated_at)
-      VALUES (?, ?, ?)
-      ON CONFLICT(book_id) DO UPDATE SET current_chapter = excluded.current_chapter, updated_at = excluded.updated_at
-    `).run(id, current, nowIso());
-    return { current_chapter: current };
+      INSERT INTO reading_progress (book_id, current_chapter, furthest_chapter, updated_at)
+      VALUES (?, ?, ?, ?)
+      ON CONFLICT(book_id) DO UPDATE SET
+        current_chapter = excluded.current_chapter,
+        furthest_chapter = MAX(reading_progress.furthest_chapter, excluded.furthest_chapter),
+        updated_at = excluded.updated_at
+    `).run(id, current, current, nowIso());
+    const row = db.prepare('SELECT current_chapter, furthest_chapter FROM reading_progress WHERE book_id = ?').get(id);
+    return { ...row, percent: computePercent(db, id, row.furthest_chapter) };
   });
 
   app.post('/api/books/:id/chapters/:idx/reextract', async (request) => {
@@ -208,6 +218,17 @@ export function deleteBookData(db, id) {
   });
   tx();
   return true;
+}
+
+function computePercent(db, bookId, furthest) {
+  const row = db.prepare(`
+    SELECT
+      COALESCE(SUM(CASE WHEN idx <= ? THEN word_count END), 0) AS read_words,
+      COALESCE(SUM(word_count), 0) AS total_words
+    FROM chapters WHERE book_id = ?
+  `).get(furthest, bookId);
+  if (!row.total_words) return 0;
+  return Math.round((row.read_words / row.total_words) * 100);
 }
 
 function numberParam(value, name) {

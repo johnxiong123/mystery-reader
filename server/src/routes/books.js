@@ -131,6 +131,24 @@ export async function registerBookRoutes(app, { db, config, extractor, settingsS
     });
   });
 
+  app.get('/api/books/:id/chapters', async (request) => {
+    const id = numberParam(request.params.id, 'id');
+    const book = ensureBook(db, id);
+    let upto;
+    if (request.query.upto != null) {
+      const parsed = Number(request.query.upto);
+      if (!Number.isInteger(parsed) || parsed < 0) throw badRequest('upto 必须是非负整数。');
+      upto = Math.min(parsed, book.total_chapters - 1);
+    } else {
+      const progress = db.prepare('SELECT furthest_chapter FROM reading_progress WHERE book_id = ?').get(id);
+      upto = progress?.furthest_chapter ?? 0;
+    }
+    return db.prepare(`
+      SELECT idx, CASE WHEN idx <= ? THEN title ELSE NULL END AS title
+      FROM chapters WHERE book_id = ? ORDER BY idx ASC
+    `).all(upto, id);
+  });
+
   app.get('/api/books/:id/chapters/:idx', async (request) => {
     const id = numberParam(request.params.id, 'id');
     const idx = numberParam(request.params.idx, 'idx');

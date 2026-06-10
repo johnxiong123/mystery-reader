@@ -11,6 +11,7 @@ import { installErrorHandler } from './errors.js';
 import { createExtractor, bindProgressDb } from './ingest/extractor.js';
 import { registerBookRoutes } from './routes/books.js';
 import { registerGraphRoutes } from './routes/graph.js';
+import { registerSearchRoutes } from './routes/search.js';
 import { registerSettingsRoutes } from './routes/settings.js';
 import { createSettingsStore } from './settings.js';
 
@@ -42,6 +43,7 @@ export async function buildApp() {
   await registerSettingsRoutes(app, { settingsStore });
   await registerBookRoutes(app, { db, config, extractor, settingsStore });
   await registerGraphRoutes(app, { db });
+  await registerSearchRoutes(app, { db });
 
   const webDist = path.resolve(__dirname, '../../web/dist');
   if (fs.existsSync(webDist)) {

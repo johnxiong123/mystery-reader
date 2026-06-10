@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 
-export default function ReaderPane({ book, chapter, currentChapter, onChangeChapter, nightMode, onNightModeChange }) {
+export default function ReaderPane({ book, chapter, currentChapter, progressPercent = 0, onChangeChapter, nightMode, onNightModeChange }) {
   const [fontSize, setFontSize] = useState(19);
 
   const paragraphs = useMemo(() => {
@@ -12,7 +12,6 @@ export default function ReaderPane({ book, chapter, currentChapter, onChangeChap
   }, [chapter]);
 
   const total = book?.total_chapters || 0;
-  const percent = total ? Math.round(((currentChapter + 1) / total) * 100) : 0;
 
   const shellClass = nightMode ? "paper-sheet-dark text-[#ece2cd]" : "paper-sheet text-ink";
   const dividerClass = nightMode ? "border-[#3a2f22]" : "border-line";
@@ -94,10 +93,10 @@ export default function ReaderPane({ book, chapter, currentChapter, onChangeChap
         </button>
         <div className="flex-1 px-3 text-center">
           <div className={`mb-1.5 text-xs ${mutedClass}`}>
-            第 {currentChapter + 1} / {total || "-"} 章 · {percent}%
+            第 {currentChapter + 1} / {total || "-"} 章 · 全书 {progressPercent}%
           </div>
           <div className={`mx-auto h-1 max-w-72 overflow-hidden rounded-full ${nightMode ? "bg-[#3a2f22]" : "bg-line"}`}>
-            <div className="h-1 rounded-full bg-noir transition-all" style={{ width: `${percent}%` }} />
+            <div className="h-1 rounded-full bg-noir transition-all" style={{ width: `${progressPercent}%` }} />
           </div>
         </div>
         <button

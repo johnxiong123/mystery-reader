@@ -21,11 +21,15 @@ const tabs = [
 
 export default function Reader({ bookId, onBack, nightMode, onNightModeChange }) {
   const mainRef = useRef(null);
+  const articleRef = useRef(null);
+  const pendingScrollRef = useRef(null);
   const [book, setBook] = useState(null);
   const [chapter, setChapter] = useState(null);
   const [graph, setGraph] = useState({ nodes: [], edges: [] });
   const [timeline, setTimeline] = useState([]);
   const [currentChapter, setCurrentChapter] = useState(0);
+  const [furthestChapter, setFurthestChapter] = useState(0);
+  const [progressPercent, setProgressPercent] = useState(0);
   const [activeTab, setActiveTab] = useState("graph");
   const [selectedCharacterId, setSelectedCharacterId] = useState(null);
   const [sidePanelOpen, setSidePanelOpen] = useState(true);
@@ -41,7 +45,8 @@ export default function Reader({ bookId, onBack, nightMode, onNightModeChange })
   const loadBook = useCallback(async () => {
     const nextBook = await api.book(bookId);
     setBook(nextBook);
-    setCurrentChapter(nextBook.current_chapter || 0);
+    setFurthestChapter(nextBook.furthest_chapter || 0);
+    setCurrentChapter(nextBook.furthest_chapter || 0);
   }, [bookId]);
 
   useEffect(() => {
@@ -50,6 +55,13 @@ export default function Reader({ bookId, onBack, nightMode, onNightModeChange })
       .catch((requestError) => setError(requestError.message))
       .finally(() => setLoading(false));
   }, [loadBook]);
+
+  useEffect(() => {
+    api.progress(bookId).then((p) => {
+      setProgressPercent(p.percent ?? 0);
+      setFurthestChapter(p.furthest_chapter ?? 0);
+    }).catch(() => {});
+  }, [bookId]);
 
   const loadAiSettings = useCallback(async () => {
     try {
@@ -133,7 +145,10 @@ export default function Reader({ bookId, onBack, nightMode, onNightModeChange })
     const bounded = Math.max(0, Math.min(nextIdx, book.total_chapters - 1));
     const saved = await api.updateProgress(bookId, bounded);
     setCurrentChapter(saved.current_chapter);
-    setBook((prev) => (prev ? { ...prev, current_chapter: saved.current_chapter } : prev));
+    setFurthestChapter(saved.furthest_chapter);
+    setProgressPercent(saved.percent ?? 0);
+    setBook((prev) => (prev ? { ...prev, current_chapter: saved.current_chapter, furthest_chapter: saved.furthest_chapter } : prev));
+    if (pendingScrollRef.current == null && articleRef.current) articleRef.current.scrollTop = 0;
   };
 
   const selectedCharacter = useMemo(
@@ -320,6 +335,7 @@ export default function Reader({ bookId, onBack, nightMode, onNightModeChange })
           book={book}
           chapter={chapter}
           currentChapter={currentChapter}
+          progressPercent={progressPercent}
           onChangeChapter={changeChapter}
           nightMode={nightMode}
           onNightModeChange={onNightModeChange}

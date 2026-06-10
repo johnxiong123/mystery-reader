@@ -6,6 +6,7 @@ import GraphView from "../components/GraphView.jsx";
 import AiSettingsDialog from "../components/AiSettingsDialog.jsx";
 import ReaderPane from "../components/ReaderPane.jsx";
 import TimelineView from "../components/TimelineView.jsx";
+import TocDrawer from "../components/TocDrawer.jsx";
 import {
   READER_SPLIT_DEFAULT,
   READER_SPLIT_MAX,
@@ -30,6 +31,7 @@ export default function Reader({ bookId, onBack, nightMode, onNightModeChange })
   const [currentChapter, setCurrentChapter] = useState(0);
   const [furthestChapter, setFurthestChapter] = useState(0);
   const [progressPercent, setProgressPercent] = useState(0);
+  const [tocOpen, setTocOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("graph");
   const [selectedCharacterId, setSelectedCharacterId] = useState(null);
   const [sidePanelOpen, setSidePanelOpen] = useState(true);
@@ -155,6 +157,9 @@ export default function Reader({ bookId, onBack, nightMode, onNightModeChange })
     () => graph.nodes.find((node) => String(node.id) === String(selectedCharacterId)),
     [graph.nodes, selectedCharacterId]
   );
+
+  // 占位：Task 13 用真实书签数据替换
+  const bookmarkChapters = useMemo(() => new Set(), []);
 
   function toggleSidePanel() {
     setSidePanelOpen((open) => {
@@ -337,6 +342,7 @@ export default function Reader({ bookId, onBack, nightMode, onNightModeChange })
           currentChapter={currentChapter}
           progressPercent={progressPercent}
           onChangeChapter={changeChapter}
+          onOpenToc={() => setTocOpen(true)}
           nightMode={nightMode}
           onNightModeChange={onNightModeChange}
         />
@@ -428,6 +434,17 @@ export default function Reader({ bookId, onBack, nightMode, onNightModeChange })
           </>
         )}
       </main>
+
+      <TocDrawer
+        open={tocOpen}
+        bookId={bookId}
+        currentChapter={currentChapter}
+        furthestChapter={furthestChapter}
+        bookmarkChapters={bookmarkChapters}
+        onJump={changeChapter}
+        onClose={() => setTocOpen(false)}
+        nightMode={nightMode}
+      />
 
       <AiSettingsDialog
         open={aiSettingsOpen}

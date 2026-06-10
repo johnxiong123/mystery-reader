@@ -27,6 +27,11 @@
 - 人物卷宗卡身份描述截断问题；
 - 书架空状态（零本书时的引导导入设计）。
 
+### 簇① 代码审查遗留打磨（低优先，非阻塞）
+来自后端 + 前端两轮代码质量审查，均为 Minor，不影响功能与防剧透：
+- 后端：`numberParam` 与 upto-clamp 逻辑在 4 个 route 文件重复，可抽 `routes/_params.js`；search snippet 按 UTF-16 切片，星文字符边界可能产生半个代理对（罕见）；进度% 按章粒度跳变（符合 spec，如需更细可折入 scroll_pct）。
+- 前端：`SelectionDossier` 的 `onClose` 每次渲染新身份导致 pointerdown 监听频繁挂卸（可 useCallback）；Cmd+F 全局拦截在搜索框内仍触发（可在 searchOpen 时忽略）；hint 的 `localStorage.setItem` 未与读取侧一样加 guard；搜索高亮大小写不敏感缺失。
+
 ## 设计原则（全局）
 
 - **不变量**：阅读阶段零 AI 调用；服务端防剧透（含章节标题、搜索片段、人物存在性）。

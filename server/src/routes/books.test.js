@@ -105,6 +105,21 @@ describe('book import without API key', () => {
     });
     expect(db.prepare('SELECT COUNT(*) AS count FROM chapters WHERE book_id = ?').get(payload.bookId).count).toBe(2);
   });
+
+  it('导入时为每章写入 word_count', async () => {
+    const response = await app.inject({
+      method: 'POST',
+      url: '/api/books/import',
+      headers: multipartHeaders('boundary'),
+      payload: multipartBody('boundary', 'sample.txt', [
+        '第一章 雨夜', '', '林砚推开旧书店的门。', '', '第二章 名单', '', '名单上有三个陌生名字。'
+      ].join('\n'))
+    });
+    const payload = JSON.parse(response.body);
+    const rows = db.prepare('SELECT word_count, LENGTH(content) AS len FROM chapters WHERE book_id = ?').all(payload.bookId);
+    expect(rows.length).toBe(2);
+    for (const row of rows) expect(row.word_count).toBe(row.len);
+  });
 });
 
 function seedFullBook(db) {

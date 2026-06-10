@@ -42,11 +42,11 @@ export async function registerBookRoutes(app, { db, config, extractor, settingsS
       const bookId = Number(bookResult.lastInsertRowid);
 
       const insertChapter = db.prepare(`
-        INSERT INTO chapters (book_id, idx, title, content, extract_status)
-        VALUES (?, ?, ?, ?, 'pending')
+        INSERT INTO chapters (book_id, idx, title, content, extract_status, word_count)
+        VALUES (?, ?, ?, ?, 'pending', ?)
       `);
       parsed.chapters.forEach((chapter, idx) => {
-        insertChapter.run(bookId, idx, chapter.title || `第 ${idx + 1} 章`, chapter.content);
+        insertChapter.run(bookId, idx, chapter.title || `第 ${idx + 1} 章`, chapter.content, chapter.content.length);
       });
       db.prepare(`
         INSERT INTO reading_progress (book_id, current_chapter, updated_at)

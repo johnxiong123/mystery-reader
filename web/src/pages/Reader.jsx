@@ -7,6 +7,7 @@ import AiSettingsDialog from "../components/AiSettingsDialog.jsx";
 import ReaderPane from "../components/ReaderPane.jsx";
 import TimelineView from "../components/TimelineView.jsx";
 import TocDrawer from "../components/TocDrawer.jsx";
+import SearchPanel from "../components/SearchPanel.jsx";
 import {
   READER_SPLIT_DEFAULT,
   READER_SPLIT_MAX,
@@ -32,6 +33,7 @@ export default function Reader({ bookId, onBack, nightMode, onNightModeChange })
   const [furthestChapter, setFurthestChapter] = useState(0);
   const [progressPercent, setProgressPercent] = useState(0);
   const [tocOpen, setTocOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("graph");
   const [selectedCharacterId, setSelectedCharacterId] = useState(null);
   const [sidePanelOpen, setSidePanelOpen] = useState(true);
@@ -64,6 +66,17 @@ export default function Reader({ bookId, onBack, nightMode, onNightModeChange })
       setFurthestChapter(p.furthest_chapter ?? 0);
     }).catch(() => {});
   }, [bookId]);
+
+  useEffect(() => {
+    function handleKeyDown(event) {
+      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "f") {
+        event.preventDefault();
+        setSearchOpen(true);
+      }
+    }
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
 
   const loadAiSettings = useCallback(async () => {
     try {
@@ -343,6 +356,7 @@ export default function Reader({ bookId, onBack, nightMode, onNightModeChange })
           progressPercent={progressPercent}
           onChangeChapter={changeChapter}
           onOpenToc={() => setTocOpen(true)}
+          onOpenSearch={() => setSearchOpen(true)}
           nightMode={nightMode}
           onNightModeChange={onNightModeChange}
         />
@@ -443,6 +457,15 @@ export default function Reader({ bookId, onBack, nightMode, onNightModeChange })
         bookmarkChapters={bookmarkChapters}
         onJump={changeChapter}
         onClose={() => setTocOpen(false)}
+        nightMode={nightMode}
+      />
+
+      <SearchPanel
+        open={searchOpen}
+        bookId={bookId}
+        furthestChapter={furthestChapter}
+        onJump={changeChapter}
+        onClose={() => setSearchOpen(false)}
         nightMode={nightMode}
       />
 

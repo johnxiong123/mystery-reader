@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 
-export default function ReaderPane({ book, chapter, currentChapter, progressPercent = 0, onChangeChapter, onOpenToc, nightMode, onNightModeChange }) {
+export default function ReaderPane({ book, chapter, currentChapter, progressPercent = 0, onChangeChapter, onOpenToc, onOpenSearch, nightMode, onNightModeChange }) {
   const [fontSize, setFontSize] = useState(19);
 
   const paragraphs = useMemo(() => {
@@ -38,6 +38,13 @@ export default function ReaderPane({ book, chapter, currentChapter, progressPerc
               className={`rounded-md border px-3 py-1.5 text-sm font-medium transition ${controlClass} hover:border-noir hover:text-noir`}
             >
               ☰ 目录
+            </button>
+            <button
+              type="button"
+              onClick={onOpenSearch}
+              className={`rounded-md border px-3 py-1.5 text-sm font-medium transition ${controlClass} hover:border-noir hover:text-noir`}
+            >
+              🔍 搜索
             </button>
             <div className={`flex items-center rounded-md border text-sm ${controlClass}`}>
               <button

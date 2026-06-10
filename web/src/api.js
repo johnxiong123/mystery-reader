@@ -57,6 +57,13 @@ export const api = {
       method: "PUT",
       body: JSON.stringify({ current_chapter: currentChapter })
     }),
+  chapterList: (id) => fetchJson(`/books/${id}/chapters`),
+  search: (id, q, upto) => fetchJson(`/books/${id}/search?q=${encodeURIComponent(q)}&upto=${upto}`),
+  bookmarks: (id) => fetchJson(`/books/${id}/bookmarks`),
+  addBookmark: (id, payload) =>
+    fetchJson(`/books/${id}/bookmarks`, { method: "POST", body: JSON.stringify(payload) }),
+  deleteBookmark: (id, bookmarkId) =>
+    fetchJson(`/books/${id}/bookmarks/${bookmarkId}`, { method: "DELETE" }),
   reExtractChapter: (bookId, chapterIdx) =>
     fetchJson(`/books/${bookId}/chapters/${chapterIdx}/reextract`, { method: "POST" }),
   reExtractBook: (bookId) =>

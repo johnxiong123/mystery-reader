@@ -229,7 +229,7 @@ export function deleteBookData(db, id) {
   if (!book) return false;
 
   const tx = db.transaction(() => {
-    for (const table of ['reading_progress', 'events', 'relationships', 'characters', 'chapters']) {
+    for (const table of ['bookmarks', 'reading_progress', 'events', 'relationships', 'characters', 'chapters']) {
       db.prepare(`DELETE FROM ${table} WHERE book_id = ?`).run(id);
     }
     db.prepare('DELETE FROM books WHERE id = ?').run(id);

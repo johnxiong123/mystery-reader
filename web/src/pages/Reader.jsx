@@ -8,6 +8,7 @@ import ReaderPane from "../components/ReaderPane.jsx";
 import TimelineView from "../components/TimelineView.jsx";
 import TocDrawer from "../components/TocDrawer.jsx";
 import SearchPanel from "../components/SearchPanel.jsx";
+import BookmarkPanel from "../components/BookmarkPanel.jsx";
 import {
   READER_SPLIT_DEFAULT,
   READER_SPLIT_MAX,
@@ -34,6 +35,8 @@ export default function Reader({ bookId, onBack, nightMode, onNightModeChange })
   const [progressPercent, setProgressPercent] = useState(0);
   const [tocOpen, setTocOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [bookmarks, setBookmarks] = useState([]);
+  const [bookmarkOpen, setBookmarkOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("graph");
   const [selectedCharacterId, setSelectedCharacterId] = useState(null);
   const [sidePanelOpen, setSidePanelOpen] = useState(true);
@@ -171,8 +174,49 @@ export default function Reader({ bookId, onBack, nightMode, onNightModeChange })
     [graph.nodes, selectedCharacterId]
   );
 
-  // 占位：Task 13 用真实书签数据替换
-  const bookmarkChapters = useMemo(() => new Set(), []);
+  const bookmarkChapters = useMemo(
+    () => new Set(bookmarks.map((bookmark) => bookmark.chapter_idx)),
+    [bookmarks]
+  );
+
+  const loadBookmarks = useCallback(async () => {
+    try { setBookmarks(await api.bookmarks(bookId)); } catch { /* 列表失败不阻塞阅读 */ }
+  }, [bookId]);
+
+  useEffect(() => { loadBookmarks(); }, [loadBookmarks]);
+
+  function excerptVisibleParagraph(el) {
+    if (!el) return null;
+    const containerTop = el.getBoundingClientRect().top;
+    for (const p of el.querySelectorAll("p")) {
+      const rect = p.getBoundingClientRect();
+      if (rect.bottom > containerTop) return p.textContent.slice(0, 30);
+    }
+    return null;
+  }
+
+  async function addBookmark() {
+    const el = articleRef.current;
+    const scrollPct = el && el.scrollHeight > el.clientHeight
+      ? el.scrollTop / (el.scrollHeight - el.clientHeight)
+      : 0;
+    const note = excerptVisibleParagraph(el);
+    await api.addBookmark(bookId, { chapter_idx: currentChapter, scroll_pct: scrollPct, note });
+    await loadBookmarks();
+  }
+
+  async function jumpToBookmark(bookmark) {
+    pendingScrollRef.current = bookmark.scroll_pct;
+    await changeChapter(bookmark.chapter_idx);
+  }
+
+  // 章节内容渲染后恢复书签滚动位置
+  useEffect(() => {
+    if (pendingScrollRef.current == null || !chapter) return;
+    const el = articleRef.current;
+    if (el) el.scrollTop = pendingScrollRef.current * (el.scrollHeight - el.clientHeight);
+    pendingScrollRef.current = null;
+  }, [chapter]);
 
   function toggleSidePanel() {
     setSidePanelOpen((open) => {
@@ -357,6 +401,8 @@ export default function Reader({ bookId, onBack, nightMode, onNightModeChange })
           onChangeChapter={changeChapter}
           onOpenToc={() => setTocOpen(true)}
           onOpenSearch={() => setSearchOpen(true)}
+          onOpenBookmarks={() => setBookmarkOpen(true)}
+          articleRef={articleRef}
           nightMode={nightMode}
           onNightModeChange={onNightModeChange}
         />
@@ -466,6 +512,16 @@ export default function Reader({ bookId, onBack, nightMode, onNightModeChange })
         furthestChapter={furthestChapter}
         onJump={changeChapter}
         onClose={() => setSearchOpen(false)}
+        nightMode={nightMode}
+      />
+
+      <BookmarkPanel
+        open={bookmarkOpen}
+        bookmarks={bookmarks}
+        onAdd={addBookmark}
+        onJump={jumpToBookmark}
+        onDelete={async (bookmarkId) => { await api.deleteBookmark(bookId, bookmarkId); await loadBookmarks(); }}
+        onClose={() => setBookmarkOpen(false)}
         nightMode={nightMode}
       />
 

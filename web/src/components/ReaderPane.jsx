@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 
-export default function ReaderPane({ book, chapter, currentChapter, progressPercent = 0, onChangeChapter, onOpenToc, onOpenSearch, nightMode, onNightModeChange }) {
+export default function ReaderPane({ book, chapter, currentChapter, progressPercent = 0, onChangeChapter, onOpenToc, onOpenSearch, onOpenBookmarks, articleRef, onTextSelect, nightMode, onNightModeChange }) {
   const [fontSize, setFontSize] = useState(19);
 
   const paragraphs = useMemo(() => {
@@ -46,6 +46,13 @@ export default function ReaderPane({ book, chapter, currentChapter, progressPerc
             >
               🔍 搜索
             </button>
+            <button
+              type="button"
+              onClick={onOpenBookmarks}
+              className={`rounded-md border px-3 py-1.5 text-sm font-medium transition ${controlClass} hover:border-noir hover:text-noir`}
+            >
+              🔖 书签
+            </button>
             <div className={`flex items-center rounded-md border text-sm ${controlClass}`}>
               <button
                 type="button"
@@ -74,7 +81,18 @@ export default function ReaderPane({ book, chapter, currentChapter, progressPerc
         </div>
       </div>
 
-      <article className="min-h-0 flex-1 overflow-y-auto px-6 py-8 sm:px-10">
+      <article
+        ref={articleRef}
+        onMouseUp={() => {
+          if (!onTextSelect) return;
+          const selection = window.getSelection();
+          const text = selection?.toString() ?? "";
+          if (!text.trim()) return;
+          const rect = selection.getRangeAt(0).getBoundingClientRect();
+          onTextSelect(text, { x: rect.left, y: rect.bottom });
+        }}
+        className="min-h-0 flex-1 overflow-y-auto px-6 py-8 sm:px-10"
+      >
         {paragraphs.length === 0 ? (
           <div className={`text-sm ${mutedClass}`}>暂无章节内容。</div>
         ) : (

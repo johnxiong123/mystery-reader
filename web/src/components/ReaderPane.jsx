@@ -87,7 +87,7 @@ export default function ReaderPane({ book, chapter, currentChapter, progressPerc
           if (!onTextSelect) return;
           const selection = window.getSelection();
           const text = selection?.toString() ?? "";
-          if (!text.trim()) return;
+          if (!text.trim() || selection.rangeCount === 0) return;
           const rect = selection.getRangeAt(0).getBoundingClientRect();
           onTextSelect(text, { x: rect.left, y: rect.bottom });
         }}

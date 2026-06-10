@@ -167,12 +167,18 @@ export default function Reader({ bookId, onBack, nightMode, onNightModeChange })
   const changeChapter = async (nextIdx) => {
     if (!book) return;
     const bounded = Math.max(0, Math.min(nextIdx, book.total_chapters - 1));
+    const isSameChapter = bounded === currentChapter;
     const saved = await api.updateProgress(bookId, bounded);
     setCurrentChapter(saved.current_chapter);
     setFurthestChapter(saved.furthest_chapter);
     setProgressPercent(saved.percent ?? 0);
     setBook((prev) => (prev ? { ...prev, current_chapter: saved.current_chapter, furthest_chapter: saved.furthest_chapter } : prev));
-    if (pendingScrollRef.current == null && articleRef.current) articleRef.current.scrollTop = 0;
+    if (isSameChapter) {
+      // 章节未变 → 内容不重渲染、恢复 effect 不触发，清掉残留的待恢复滚动，避免泄漏到下次切章
+      pendingScrollRef.current = null;
+    } else if (pendingScrollRef.current == null && articleRef.current) {
+      articleRef.current.scrollTop = 0;
+    }
   };
 
   const selectedCharacter = useMemo(
@@ -223,6 +229,12 @@ export default function Reader({ bookId, onBack, nightMode, onNightModeChange })
   }
 
   async function jumpToBookmark(bookmark) {
+    if (bookmark.chapter_idx === currentChapter) {
+      // 同章书签：内容不会重渲染，直接恢复滚动位置
+      const el = articleRef.current;
+      if (el) el.scrollTop = bookmark.scroll_pct * (el.scrollHeight - el.clientHeight);
+      return;
+    }
     pendingScrollRef.current = bookmark.scroll_pct;
     await changeChapter(bookmark.chapter_idx);
   }

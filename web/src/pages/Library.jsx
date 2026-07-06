@@ -90,6 +90,7 @@ export default function Library({ books, loading, error, onRefresh, onOpenBook, 
   positionRef.current = position;
 
   const loadAiSettings = useCallback(async () => {
+    if (!api.capabilities.canConfigureAi) return;
     try {
       const nextSettings = await api.aiSettings();
       setAiSettings(nextSettings);
@@ -386,20 +387,24 @@ export default function Library({ books, loading, error, onRefresh, onOpenBook, 
           }}
         />
         <div className="flex items-center gap-2">
-          <button
-            type="button"
-            onClick={() => setSettingsOpen(true)}
-            className="rounded-md border border-[#d4bdb0] bg-white/60 px-4 py-2 text-sm font-semibold text-[#5c3c4b] shadow-sm transition hover:border-[#6b2f1e] hover:text-[#6b2f1e]"
-          >
-            {aiSettings?.configured ? "AI 已配置" : "设置"}
-          </button>
-          <button
-            type="button"
-            onClick={() => inputRef.current?.click()}
-            className="rounded-md bg-[#6b2f1e] px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-[#8a3c26]"
-          >
-            导入书籍
-          </button>
+          {api.capabilities.canConfigureAi && (
+            <button
+              type="button"
+              onClick={() => setSettingsOpen(true)}
+              className="rounded-md border border-[#d4bdb0] bg-white/60 px-4 py-2 text-sm font-semibold text-[#5c3c4b] shadow-sm transition hover:border-[#6b2f1e] hover:text-[#6b2f1e]"
+            >
+              {aiSettings?.configured ? "AI 已配置" : "设置"}
+            </button>
+          )}
+          {api.capabilities.canImport && (
+            <button
+              type="button"
+              onClick={() => inputRef.current?.click()}
+              className="rounded-md bg-[#6b2f1e] px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-[#8a3c26]"
+            >
+              导入书籍
+            </button>
+          )}
         </div>
       </header>
 
@@ -524,7 +529,7 @@ export default function Library({ books, loading, error, onRefresh, onOpenBook, 
               <ShelfIcon />
               All books
             </button>
-            {selectedBook && (
+            {selectedBook && api.capabilities.canManageBooks && (
               <button
                 type="button"
                 onClick={deleteSelectedBook}
@@ -559,7 +564,7 @@ export default function Library({ books, loading, error, onRefresh, onOpenBook, 
             {books.length} books · {totals.chapters} chapters · {totals.done} completed
           </div>
 
-          {activeImport && (
+          {api.capabilities.canImport && activeImport && (
             <div className="mx-auto mt-5 w-full max-w-4xl">
               <ImportProgress progress={activeImport} />
             </div>
@@ -567,14 +572,16 @@ export default function Library({ books, loading, error, onRefresh, onOpenBook, 
         </section>
 
       </main>
-      <AiSettingsDialog
-        open={settingsOpen}
-        settings={aiSettings}
-        saving={settingsSaving}
-        error={settingsError}
-        onClose={() => setSettingsOpen(false)}
-        onSave={saveAiSettings}
-      />
+      {api.capabilities.canConfigureAi && (
+        <AiSettingsDialog
+          open={settingsOpen}
+          settings={aiSettings}
+          saving={settingsSaving}
+          error={settingsError}
+          onClose={() => setSettingsOpen(false)}
+          onSave={saveAiSettings}
+        />
+      )}
     </div>
   );
 }

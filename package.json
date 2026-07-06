@@ -5,7 +5,8 @@
   "type": "module",
   "workspaces": [
     "server",
-    "web"
+    "web",
+    "tools/pack-producer"
   ],
   "scripts": {
     "dev": "concurrently \"npm run dev -w server\" \"npm run dev -w web\"",

@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
+    "build:static": "VITE_DATA_MODE=pack vite build --base=/mystery-reader/ --outDir dist-static",
     "preview": "vite preview --host 0.0.0.0",
     "test": "vitest run"
   },

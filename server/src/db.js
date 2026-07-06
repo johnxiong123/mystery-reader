@@ -29,6 +29,7 @@ export function initDb(config) {
       title TEXT,
       content TEXT NOT NULL,
       extract_status TEXT DEFAULT 'pending',
+      word_count INTEGER,
       UNIQUE(book_id, idx)
     );
     CREATE TABLE IF NOT EXISTS characters (
@@ -59,10 +60,20 @@ export function initDb(config) {
     CREATE TABLE IF NOT EXISTS reading_progress (
       book_id INTEGER PRIMARY KEY,
       current_chapter INTEGER NOT NULL DEFAULT 0,
+      furthest_chapter INTEGER NOT NULL DEFAULT 0,
       updated_at TEXT NOT NULL
+    );
+    CREATE TABLE IF NOT EXISTS bookmarks (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      book_id INTEGER NOT NULL,
+      chapter_idx INTEGER NOT NULL,
+      scroll_pct REAL NOT NULL DEFAULT 0,
+      note TEXT,
+      created_at TEXT NOT NULL
     );
   `);
 
+  runMigrations(db);
   repairImportStatuses(db);
 
   return db;
@@ -75,6 +86,22 @@ export function getDb() {
 
 export function nowIso() {
   return new Date().toISOString();
+}
+
+function runMigrations(database) {
+  ensureColumn(database, 'reading_progress', 'furthest_chapter', 'INTEGER NOT NULL DEFAULT 0');
+  ensureColumn(database, 'chapters', 'word_count', 'INTEGER');
+  database.exec(`
+    UPDATE reading_progress SET furthest_chapter = current_chapter WHERE furthest_chapter < current_chapter;
+    UPDATE chapters SET word_count = LENGTH(content) WHERE word_count IS NULL;
+  `);
+}
+
+function ensureColumn(database, table, column, definition) {
+  const columns = database.prepare(`PRAGMA table_info(${table})`).all().map((item) => item.name);
+  if (!columns.includes(column)) {
+    database.exec(`ALTER TABLE ${table} ADD COLUMN ${column} ${definition}`);
+  }
 }
 
 function repairImportStatuses(database) {

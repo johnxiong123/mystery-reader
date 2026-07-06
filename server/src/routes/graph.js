@@ -6,11 +6,12 @@ export async function registerGraphRoutes(app, { db }) {
     const upto = resolveUpto(db, bookId, request.query.upto);
 
     const nodes = db.prepare(`
-      SELECT id, name, identity, first_seen_chapter
+      SELECT id, name, aliases, identity, first_seen_chapter
       FROM characters
       WHERE book_id = ? AND first_seen_chapter <= ?
       ORDER BY first_seen_chapter ASC, id ASC
-    `).all(bookId, upto);
+    `).all(bookId, upto)
+      .map((node) => ({ ...node, aliases: parseStringArray(node.aliases) }));
 
     const visibleIds = new Set(nodes.map((node) => node.id));
     const edges = db.prepare(`

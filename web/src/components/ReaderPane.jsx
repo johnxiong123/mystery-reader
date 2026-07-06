@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 
-export default function ReaderPane({ book, chapter, currentChapter, onChangeChapter, nightMode, onNightModeChange }) {
+export default function ReaderPane({ book, chapter, currentChapter, progressPercent = 0, onChangeChapter, onOpenToc, onOpenSearch, onOpenBookmarks, articleRef, onTextSelect, nightMode, onNightModeChange }) {
   const [fontSize, setFontSize] = useState(19);
 
   const paragraphs = useMemo(() => {
@@ -12,7 +12,6 @@ export default function ReaderPane({ book, chapter, currentChapter, onChangeChap
   }, [chapter]);
 
   const total = book?.total_chapters || 0;
-  const percent = total ? Math.round(((currentChapter + 1) / total) * 100) : 0;
 
   const shellClass = nightMode ? "paper-sheet-dark text-[#ece2cd]" : "paper-sheet text-ink";
   const dividerClass = nightMode ? "border-[#3a2f22]" : "border-line";
@@ -33,6 +32,27 @@ export default function ReaderPane({ book, chapter, currentChapter, onChangeChap
             {chapter?.title || "正在载入章节"}
           </h1>
           <div className="flex items-center gap-3">
+            <button
+              type="button"
+              onClick={onOpenToc}
+              className={`rounded-md border px-3 py-1.5 text-sm font-medium transition ${controlClass} hover:border-noir hover:text-noir`}
+            >
+              ☰ 目录
+            </button>
+            <button
+              type="button"
+              onClick={onOpenSearch}
+              className={`rounded-md border px-3 py-1.5 text-sm font-medium transition ${controlClass} hover:border-noir hover:text-noir`}
+            >
+              🔍 搜索
+            </button>
+            <button
+              type="button"
+              onClick={onOpenBookmarks}
+              className={`rounded-md border px-3 py-1.5 text-sm font-medium transition ${controlClass} hover:border-noir hover:text-noir`}
+            >
+              🔖 书签
+            </button>
             <div className={`flex items-center rounded-md border text-sm ${controlClass}`}>
               <button
                 type="button"
@@ -61,7 +81,18 @@ export default function ReaderPane({ book, chapter, currentChapter, onChangeChap
         </div>
       </div>
 
-      <article className="min-h-0 flex-1 overflow-y-auto px-6 py-8 sm:px-10">
+      <article
+        ref={articleRef}
+        onMouseUp={() => {
+          if (!onTextSelect) return;
+          const selection = window.getSelection();
+          const text = selection?.toString() ?? "";
+          if (!text.trim() || selection.rangeCount === 0) return;
+          const rect = selection.getRangeAt(0).getBoundingClientRect();
+          onTextSelect(text, { x: rect.left, y: rect.bottom });
+        }}
+        className="min-h-0 flex-1 overflow-y-auto px-6 py-8 sm:px-10"
+      >
         {paragraphs.length === 0 ? (
           <div className={`text-sm ${mutedClass}`}>暂无章节内容。</div>
         ) : (
@@ -94,10 +125,10 @@ export default function ReaderPane({ book, chapter, currentChapter, onChangeChap
         </button>
         <div className="flex-1 px-3 text-center">
           <div className={`mb-1.5 text-xs ${mutedClass}`}>
-            第 {currentChapter + 1} / {total || "-"} 章 · {percent}%
+            第 {currentChapter + 1} / {total || "-"} 章 · 全书 {progressPercent}%
           </div>
           <div className={`mx-auto h-1 max-w-72 overflow-hidden rounded-full ${nightMode ? "bg-[#3a2f22]" : "bg-line"}`}>
-            <div className="h-1 rounded-full bg-noir transition-all" style={{ width: `${percent}%` }} />
+            <div className="h-1 rounded-full bg-noir transition-all" style={{ width: `${progressPercent}%` }} />
           </div>
         </div>
         <button

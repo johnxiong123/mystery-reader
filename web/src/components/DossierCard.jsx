@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { api } from "../api.js";
 
-export default function DossierCard({ bookId, character, currentChapter, onClose, nightMode = false }) {
+export default function DossierCard({ bookId, character, currentChapter, onClose, nightMode = false, variant = "panel" }) {
   const [dossier, setDossier] = useState(null);
   const [error, setError] = useState("");
 
@@ -42,9 +42,13 @@ export default function DossierCard({ bookId, character, currentChapter, onClose
   const slip = nightMode ? "border-[#3a2f22] bg-[#2a2219]" : "border-line bg-manila";
   const accent = nightMode ? "text-[#d4564a]" : "text-noir";
 
+  const layoutClass = variant === "popover"
+    ? "w-full max-h-[60vh] overflow-y-auto rounded-md border p-4 shadow-2xl backdrop-blur"
+    : "absolute inset-x-3 bottom-3 z-20 max-h-[45vh] w-auto overflow-y-auto rounded-md border p-4 shadow-panel backdrop-blur sm:inset-x-auto sm:bottom-auto sm:right-4 sm:top-4 sm:max-h-[calc(100%-32px)] sm:w-[min(360px,calc(100%-32px))] sm:p-5";
+
   return (
     <aside
-      className={`absolute inset-x-3 bottom-3 z-20 max-h-[45vh] w-auto overflow-y-auto rounded-md border p-4 shadow-panel backdrop-blur sm:inset-x-auto sm:bottom-auto sm:right-4 sm:top-4 sm:max-h-[calc(100%-32px)] sm:w-[min(360px,calc(100%-32px))] sm:p-5 ${shellSafe} ${
+      className={`${layoutClass} ${shellSafe} ${
         nightMode ? "bg-[#241d15]/97 text-[#ece2cd]" : "bg-card/97 text-ink"
       }`}
     >

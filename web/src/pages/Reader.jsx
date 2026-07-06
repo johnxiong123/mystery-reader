@@ -6,6 +6,11 @@ import GraphView from "../components/GraphView.jsx";
 import AiSettingsDialog from "../components/AiSettingsDialog.jsx";
 import ReaderPane from "../components/ReaderPane.jsx";
 import TimelineView from "../components/TimelineView.jsx";
+import TocDrawer from "../components/TocDrawer.jsx";
+import SearchPanel from "../components/SearchPanel.jsx";
+import BookmarkPanel from "../components/BookmarkPanel.jsx";
+import SelectionDossier from "../components/SelectionDossier.jsx";
+import { buildLookup, matchSelection } from "../selectionLookup.js";
 import {
   READER_SPLIT_DEFAULT,
   READER_SPLIT_MAX,
@@ -21,11 +26,23 @@ const tabs = [
 
 export default function Reader({ bookId, onBack, nightMode, onNightModeChange }) {
   const mainRef = useRef(null);
+  const articleRef = useRef(null);
+  const pendingScrollRef = useRef(null);
   const [book, setBook] = useState(null);
   const [chapter, setChapter] = useState(null);
   const [graph, setGraph] = useState({ nodes: [], edges: [] });
   const [timeline, setTimeline] = useState([]);
   const [currentChapter, setCurrentChapter] = useState(0);
+  const [furthestChapter, setFurthestChapter] = useState(0);
+  const [progressPercent, setProgressPercent] = useState(0);
+  const [tocOpen, setTocOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [bookmarks, setBookmarks] = useState([]);
+  const [bookmarkOpen, setBookmarkOpen] = useState(false);
+  const [selectionHit, setSelectionHit] = useState(null);
+  const [hintDismissed, setHintDismissed] = useState(
+    () => typeof localStorage !== "undefined" && localStorage.getItem("mr-selection-hint") === "1"
+  );
   const [activeTab, setActiveTab] = useState("graph");
   const [selectedCharacterId, setSelectedCharacterId] = useState(null);
   const [sidePanelOpen, setSidePanelOpen] = useState(true);
@@ -41,7 +58,8 @@ export default function Reader({ bookId, onBack, nightMode, onNightModeChange })
   const loadBook = useCallback(async () => {
     const nextBook = await api.book(bookId);
     setBook(nextBook);
-    setCurrentChapter(nextBook.current_chapter || 0);
+    setFurthestChapter(nextBook.furthest_chapter || 0);
+    setCurrentChapter(nextBook.furthest_chapter || 0);
   }, [bookId]);
 
   useEffect(() => {
@@ -50,6 +68,24 @@ export default function Reader({ bookId, onBack, nightMode, onNightModeChange })
       .catch((requestError) => setError(requestError.message))
       .finally(() => setLoading(false));
   }, [loadBook]);
+
+  useEffect(() => {
+    api.progress(bookId).then((p) => {
+      setProgressPercent(p.percent ?? 0);
+      setFurthestChapter(p.furthest_chapter ?? 0);
+    }).catch(() => {});
+  }, [bookId]);
+
+  useEffect(() => {
+    function handleKeyDown(event) {
+      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "f") {
+        event.preventDefault();
+        setSearchOpen(true);
+      }
+    }
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
 
   const loadAiSettings = useCallback(async () => {
     try {
@@ -131,15 +167,85 @@ export default function Reader({ bookId, onBack, nightMode, onNightModeChange })
   const changeChapter = async (nextIdx) => {
     if (!book) return;
     const bounded = Math.max(0, Math.min(nextIdx, book.total_chapters - 1));
+    const isSameChapter = bounded === currentChapter;
     const saved = await api.updateProgress(bookId, bounded);
     setCurrentChapter(saved.current_chapter);
-    setBook((prev) => (prev ? { ...prev, current_chapter: saved.current_chapter } : prev));
+    setFurthestChapter(saved.furthest_chapter);
+    setProgressPercent(saved.percent ?? 0);
+    setBook((prev) => (prev ? { ...prev, current_chapter: saved.current_chapter, furthest_chapter: saved.furthest_chapter } : prev));
+    if (isSameChapter) {
+      // 章节未变 → 内容不重渲染、恢复 effect 不触发，清掉残留的待恢复滚动，避免泄漏到下次切章
+      pendingScrollRef.current = null;
+    } else if (pendingScrollRef.current == null && articleRef.current) {
+      articleRef.current.scrollTop = 0;
+    }
   };
 
   const selectedCharacter = useMemo(
     () => graph.nodes.find((node) => String(node.id) === String(selectedCharacterId)),
     [graph.nodes, selectedCharacterId]
   );
+
+  const bookmarkChapters = useMemo(
+    () => new Set(bookmarks.map((bookmark) => bookmark.chapter_idx)),
+    [bookmarks]
+  );
+
+  const lookup = useMemo(() => buildLookup(graph.nodes), [graph.nodes]);
+
+  function handleTextSelect(text, anchor) {
+    const hit = matchSelection(text, lookup);
+    if (hit) {
+      setSelectionHit({ character: hit, miss: null, anchor });
+    } else if (text.trim().length > 0 && text.trim().length <= 12) {
+      setSelectionHit({ character: null, miss: "未找到该人物", anchor });
+    }
+  }
+
+  const loadBookmarks = useCallback(async () => {
+    try { setBookmarks(await api.bookmarks(bookId)); } catch { /* 列表失败不阻塞阅读 */ }
+  }, [bookId]);
+
+  useEffect(() => { loadBookmarks(); }, [loadBookmarks]);
+
+  function excerptVisibleParagraph(el) {
+    if (!el) return null;
+    const containerTop = el.getBoundingClientRect().top;
+    for (const p of el.querySelectorAll("p")) {
+      const rect = p.getBoundingClientRect();
+      if (rect.bottom > containerTop) return p.textContent.slice(0, 30);
+    }
+    return null;
+  }
+
+  async function addBookmark() {
+    const el = articleRef.current;
+    const scrollPct = el && el.scrollHeight > el.clientHeight
+      ? el.scrollTop / (el.scrollHeight - el.clientHeight)
+      : 0;
+    const note = excerptVisibleParagraph(el);
+    await api.addBookmark(bookId, { chapter_idx: currentChapter, scroll_pct: scrollPct, note });
+    await loadBookmarks();
+  }
+
+  async function jumpToBookmark(bookmark) {
+    if (bookmark.chapter_idx === currentChapter) {
+      // 同章书签：内容不会重渲染，直接恢复滚动位置
+      const el = articleRef.current;
+      if (el) el.scrollTop = bookmark.scroll_pct * (el.scrollHeight - el.clientHeight);
+      return;
+    }
+    pendingScrollRef.current = bookmark.scroll_pct;
+    await changeChapter(bookmark.chapter_idx);
+  }
+
+  // 章节内容渲染后恢复书签滚动位置
+  useEffect(() => {
+    if (pendingScrollRef.current == null || !chapter) return;
+    const el = articleRef.current;
+    if (el) el.scrollTop = pendingScrollRef.current * (el.scrollHeight - el.clientHeight);
+    pendingScrollRef.current = null;
+  }, [chapter]);
 
   function toggleSidePanel() {
     setSidePanelOpen((open) => {
@@ -311,6 +417,21 @@ export default function Reader({ bookId, onBack, nightMode, onNightModeChange })
         <div className="shrink-0 border-b border-red-300 bg-red-50 px-5 py-2 text-sm text-red-700">{error}</div>
       )}
 
+      {!hintDismissed && (
+        <div className={`flex shrink-0 items-center justify-between border-b px-5 py-2 text-sm ${
+          nightMode ? "border-[#3a2f22] bg-[#2a2219] text-[#b6a384]" : "border-line bg-card text-steel"
+        }`}>
+          <span>💡 选中正文中的人名，可就地查看人物档案。</span>
+          <button
+            type="button"
+            onClick={() => { localStorage.setItem("mr-selection-hint", "1"); setHintDismissed(true); }}
+            className="px-2 font-semibold hover:text-noir"
+          >
+            知道了
+          </button>
+        </div>
+      )}
+
       <main
         ref={mainRef}
         className={`reader-workspace min-h-0 flex-1 ${sidePanelOpen ? "reader-workspace-open" : "reader-workspace-closed"} ${resizing ? "reader-workspace-resizing" : ""}`}
@@ -320,7 +441,13 @@ export default function Reader({ bookId, onBack, nightMode, onNightModeChange })
           book={book}
           chapter={chapter}
           currentChapter={currentChapter}
+          progressPercent={progressPercent}
           onChangeChapter={changeChapter}
+          onOpenToc={() => setTocOpen(true)}
+          onOpenSearch={() => setSearchOpen(true)}
+          onOpenBookmarks={() => setBookmarkOpen(true)}
+          onTextSelect={handleTextSelect}
+          articleRef={articleRef}
           nightMode={nightMode}
           onNightModeChange={onNightModeChange}
         />
@@ -412,6 +539,47 @@ export default function Reader({ bookId, onBack, nightMode, onNightModeChange })
           </>
         )}
       </main>
+
+      <TocDrawer
+        open={tocOpen}
+        bookId={bookId}
+        currentChapter={currentChapter}
+        furthestChapter={furthestChapter}
+        bookmarkChapters={bookmarkChapters}
+        onJump={changeChapter}
+        onClose={() => setTocOpen(false)}
+        nightMode={nightMode}
+      />
+
+      <SearchPanel
+        open={searchOpen}
+        bookId={bookId}
+        furthestChapter={furthestChapter}
+        onJump={changeChapter}
+        onClose={() => setSearchOpen(false)}
+        nightMode={nightMode}
+      />
+
+      <BookmarkPanel
+        open={bookmarkOpen}
+        bookmarks={bookmarks}
+        onAdd={addBookmark}
+        onJump={jumpToBookmark}
+        onDelete={async (bookmarkId) => { await api.deleteBookmark(bookId, bookmarkId); await loadBookmarks(); }}
+        onClose={() => setBookmarkOpen(false)}
+        nightMode={nightMode}
+      />
+
+      <SelectionDossier
+        bookId={bookId}
+        character={selectionHit?.character || null}
+        miss={selectionHit?.miss || null}
+        anchor={selectionHit?.anchor || null}
+        currentChapter={currentChapter}
+        onOpenFull={(charId) => { setSidePanelOpen(true); setSelectedCharacterId(charId); }}
+        onClose={() => setSelectionHit(null)}
+        nightMode={nightMode}
+      />
 
       <AiSettingsDialog
         open={aiSettingsOpen}

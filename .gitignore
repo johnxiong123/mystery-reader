@@ -1,8 +1,8 @@
 # 环境变量（含 API Key）
 .env
 
-# 用户数据
-data/
+# 用户数据（锚定根目录，避免误伤 web/src/data/ 等源码目录）
+/data/
 uploads/
 *.sqlite
 *.sqlite-shm

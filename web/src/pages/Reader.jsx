@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { api } from "../api.js";
+import { api } from "../data/index.js";
 import CharacterList from "../components/CharacterList.jsx";
 import DossierCard from "../components/DossierCard.jsx";
 import GraphView from "../components/GraphView.jsx";

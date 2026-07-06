@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { api, openImportProgress } from "../api.js";
+import { api } from "../data/index.js";
+import { openImportProgress } from "../api.js";
 import AiSettingsDialog from "../components/AiSettingsDialog.jsx";
 import ImportProgress from "../components/ImportProgress.jsx";
 

@@ -3,7 +3,27 @@ import os from 'node:os';
 import path from 'node:path';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { loadArtifact } from '../paths.js';
-import { runSplit } from './split.js';
+import { regexSplit, runSplit } from './split.js';
+
+describe('regexSplit（兜底分章）', () => {
+  it('识别 Chapter/罗马数字/中文章回标题行', () => {
+    const chapters = regexSplit([
+      'front matter ignored',
+      'Chapter 1 Alpha', 'line a1', '', 'line a2',
+      'II. Beta', 'line b1',
+      '第三章 收网', 'line c1'
+    ].join('\n'));
+    expect(chapters.length).toBe(3);
+    expect(chapters[0].title).toBe('Chapter 1 Alpha');
+    expect(chapters[0].content).toContain('line a2');
+    expect(chapters[1].title).toBe('II. Beta');
+    expect(chapters[2].title).toBe('第三章 收网');
+  });
+
+  it('无标题行时返回空数组', () => {
+    expect(regexSplit('just prose\nno headings')).toEqual([]);
+  });
+});
 
 describe('runSplit', () => {
   let tempDir;

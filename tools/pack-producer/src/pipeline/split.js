@@ -3,7 +3,8 @@ import { parseTxt } from '../../../../server/src/ingest/parseTxt.js';
 import { saveArtifact } from '../paths.js';
 
 const SUPPORTED_LANGS = new Set(['en', 'ja', 'fr']);
-const CHAPTER_HEADING = /^(Chapter|CHAPTER|第[一二三四五六七八九十百\d]+[章回]|[IVXLC]+\.)\s?/;
+// 罗马数字标题要求后面跟标题文字（"I. A SCANDAL..."），避免把故事内部的裸小节标记（单独一行 "I."）误判为章
+const CHAPTER_HEADING = /^(Chapter|CHAPTER|第[一二三四五六七八九十百\d]+[章回])\s?|^[IVXLC]+\.\s+\S/;
 
 export function regexSplit(content) {
   const chapters = [];

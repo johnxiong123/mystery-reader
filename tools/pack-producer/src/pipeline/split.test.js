@@ -23,6 +23,19 @@ describe('regexSplit（兜底分章）', () => {
   it('无标题行时返回空数组', () => {
     expect(regexSplit('just prose\nno headings')).toEqual([]);
   });
+
+  it('裸罗马数字小节标记不算章标题（Gutenberg 故事内部分节）', () => {
+    const chapters = regexSplit([
+      'I. A SCANDAL IN BOHEMIA', 'story text a',
+      'I.', 'section one text',
+      'II.', 'section two text',
+      'II. THE RED-HEADED LEAGUE', 'story text b'
+    ].join('\n'));
+    expect(chapters.length).toBe(2);
+    expect(chapters[0].title).toBe('I. A SCANDAL IN BOHEMIA');
+    expect(chapters[0].content).toContain('section two text');
+    expect(chapters[1].title).toBe('II. THE RED-HEADED LEAGUE');
+  });
 });
 
 describe('runSplit', () => {

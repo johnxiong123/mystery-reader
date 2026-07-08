@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { api } from "../api.js";
+import { api } from "../data/index.js";
 
 export default function TocDrawer({ open, bookId, currentChapter, furthestChapter, bookmarkChapters, onJump, onClose, nightMode }) {
   const [chapters, setChapters] = useState([]);

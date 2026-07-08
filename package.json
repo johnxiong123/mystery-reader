@@ -5,12 +5,14 @@
   "type": "module",
   "workspaces": [
     "server",
-    "web"
+    "web",
+    "tools/pack-producer"
   ],
   "scripts": {
     "dev": "concurrently \"npm run dev -w server\" \"npm run dev -w web\"",
     "start": "npm run build -w web && npm run start -w server",
     "test": "npm run test -w server",
+    "build:static": "npm run build:static -w web && rm -rf web/dist-static/packs && (test -d packs && cp -R packs web/dist-static/packs || echo 'no packs yet')",
     "smoke:real": "node scripts/realImportSmoke.js",
     "chapter:probe": "node scripts/probeChapterSplit.js",
     "package:mac": "node scripts/packageMacDmg.js"

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { api } from "../api.js";
+import { api } from "../data/index.js";
 
 export default function SearchPanel({ open, bookId, furthestChapter, onJump, onClose, nightMode }) {
   const [query, setQuery] = useState("");

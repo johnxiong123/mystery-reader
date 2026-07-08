@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { api } from "./api.js";
+import { api } from "./data/index.js";
 import Library from "./pages/Library.jsx";
 import Reader from "./pages/Reader.jsx";
 

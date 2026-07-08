@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { api } from "../api.js";
+import { api } from "../data/index.js";
 import CharacterList from "../components/CharacterList.jsx";
 import DossierCard from "../components/DossierCard.jsx";
 import GraphView from "../components/GraphView.jsx";
@@ -88,6 +88,7 @@ export default function Reader({ bookId, onBack, nightMode, onNightModeChange })
   }, []);
 
   const loadAiSettings = useCallback(async () => {
+    if (!api.capabilities.canConfigureAi) return;
     try {
       const nextSettings = await api.aiSettings();
       setAiSettings(nextSettings);
@@ -581,14 +582,16 @@ export default function Reader({ bookId, onBack, nightMode, onNightModeChange })
         nightMode={nightMode}
       />
 
-      <AiSettingsDialog
-        open={aiSettingsOpen}
-        settings={aiSettings}
-        saving={settingsSaving}
-        error={settingsError}
-        onClose={() => setAiSettingsOpen(false)}
-        onSave={saveAiSettings}
-      />
+      {api.capabilities.canConfigureAi && (
+        <AiSettingsDialog
+          open={aiSettingsOpen}
+          settings={aiSettings}
+          saving={settingsSaving}
+          error={settingsError}
+          onClose={() => setAiSettingsOpen(false)}
+          onSave={saveAiSettings}
+        />
+      )}
     </div>
   );
 }

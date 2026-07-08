@@ -51,6 +51,10 @@ export async function runTranslate({ slug, ai, from = null }) {
   if (!meta || !src || !glossary) throw new Error('请先执行 split 与 glossary 步骤。');
 
   const done = new Map((loadArtifact(slug, 'chapters.zh') || []).map((c) => [c.idx, c]));
+  const staleDossier = loadArtifact(slug, 'dossier');
+  if (from != null && staleDossier && staleDossier.extracted_upto >= from) {
+    console.warn(`[translate] ⚠️ 第 ${from + 1} 章起将重译，但 dossier 已抽取到第 ${staleDossier.extracted_upto + 1} 章——重译后请删除 work/${slug}/dossier.json 重新抽取，否则卷宗基于旧译文。`);
+  }
   for (const chapter of src) {
     if (from != null && chapter.idx >= from) done.delete(chapter.idx);
     if (done.has(chapter.idx)) continue;

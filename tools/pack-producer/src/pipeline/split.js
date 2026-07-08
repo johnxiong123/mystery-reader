@@ -28,13 +28,11 @@ export function runSplit({ slug, srcPath, lang, title, author }) {
   const buffer = fs.readFileSync(srcPath);
   let parsed = parseTxt(buffer, `${slug}.txt`);
 
-  // 中文分章器对外文书最常见的失败模式是整本挤成 1 章（而非 0 章），
-  // 因此 <=1 章即尝试正则兜底，谁切出的章多用谁。
-  if (parsed.chapters.length <= 1) {
-    const fallbackChapters = regexSplit(buffer.toString('utf-8'));
-    if (fallbackChapters.length > parsed.chapters.length) {
-      parsed = { title: parsed.title, author: parsed.author, chapters: fallbackChapters };
-    }
+  // 本工具只处理外文原著（en/ja/fr）：parseTxt 的中文标题检测对外文失效时会退化成
+  // 均匀切"第 N 段"，因此外文标题正则能切出真实章节（>=2）时优先用正则结果。
+  const headingChapters = regexSplit(buffer.toString('utf-8'));
+  if (headingChapters.length >= 2) {
+    parsed = { title: parsed.title, author: parsed.author, chapters: headingChapters };
   }
 
   if (!parsed.chapters.length) throw new Error('未解析到有效章节。');

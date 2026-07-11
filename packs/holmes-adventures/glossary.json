@@ -1,0 +1,2729 @@
+{
+  "lang": "en",
+  "entries": [
+    {
+      "term": "Adler",
+      "zh": "阿德勒",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Arnsworth Castle",
+      "zh": "安斯沃思城堡",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Atkinson",
+      "zh": "阿特金森",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Atkinson brothers",
+      "zh": "阿特金森兄弟",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Baker Street",
+      "zh": "贝克街",
+      "type": "place",
+      "count": 12
+    },
+    {
+      "term": "Bohemia",
+      "zh": "波希米亚",
+      "type": "place",
+      "count": 2
+    },
+    {
+      "term": "Boswell",
+      "zh": "博斯韦尔",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Briony Lodge",
+      "zh": "布里奥尼别墅",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Carlsbad",
+      "zh": "卡尔斯巴德",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Cassel-Felstein",
+      "zh": "卡塞尔-费尔施泰因",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Charing Cross",
+      "zh": "查令十字街",
+      "type": "place",
+      "count": 2
+    },
+    {
+      "term": "Chubb lock",
+      "zh": "丘伯锁",
+      "type": "other",
+      "count": 1
+    },
+    {
+      "term": "Church of St. Monica",
+      "zh": "圣莫尼卡教堂",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Clotilde Lothman von Saxe-Meningen",
+      "zh": "克洛蒂尔德·洛特曼·冯·萨克森-迈宁根",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Continent",
+      "zh": "欧洲大陆",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Continental Gazetteer",
+      "zh": "《大陆地名词典》",
+      "type": "other",
+      "count": 1
+    },
+    {
+      "term": "Count Von Kramm",
+      "zh": "冯·克拉姆伯爵",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Darlington Substitution Scandal",
+      "zh": "达林顿替身丑闻",
+      "type": "other",
+      "count": 1
+    },
+    {
+      "term": "Dr. Watson",
+      "zh": "华生医生",
+      "type": "person",
+      "count": 3
+    },
+    {
+      "term": "Edgeware Road",
+      "zh": "埃奇韦尔路",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Eglonitz",
+      "zh": "埃格洛尼茨",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Eglow",
+      "zh": "埃格洛",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Egria",
+      "zh": "埃格里亚",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "England",
+      "zh": "英格兰",
+      "type": "place",
+      "count": 8
+    },
+    {
+      "term": "Europe",
+      "zh": "欧洲",
+      "type": "place",
+      "count": 3
+    },
+    {
+      "term": "God",
+      "zh": "上帝",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Godfrey Norton",
+      "zh": "戈弗雷·诺顿",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Gross & Hankey’s",
+      "zh": "格罗斯和汉基公司",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Hercules",
+      "zh": "赫拉克勒斯",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Holland",
+      "zh": "荷兰",
+      "type": "place",
+      "count": 2
+    },
+    {
+      "term": "Holmes",
+      "zh": "福尔摩斯",
+      "type": "person",
+      "count": 2
+    },
+    {
+      "term": "House of Ormstein",
+      "zh": "奥姆斯坦家族",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Imperial Opera of Warsaw",
+      "zh": "华沙帝国歌剧院",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Inner Temple",
+      "zh": "内殿律师学院",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Irene Adler",
+      "zh": "艾琳·阿德勒",
+      "type": "person",
+      "count": 3
+    },
+    {
+      "term": "Irene Norton",
+      "zh": "艾琳·诺顿",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "John",
+      "zh": "约翰",
+      "type": "person",
+      "count": 3
+    },
+    {
+      "term": "John Hare",
+      "zh": "约翰·黑尔",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "King of Bohemia",
+      "zh": "波希米亚国王",
+      "type": "person",
+      "count": 2
+    },
+    {
+      "term": "King of Scandinavia",
+      "zh": "斯堪的纳维亚国王",
+      "type": "person",
+      "count": 2
+    },
+    {
+      "term": "kingdom of Bohemia",
+      "zh": "波希米亚王国",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "La Scala",
+      "zh": "斯卡拉歌剧院",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Langham",
+      "zh": "朗廷",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "London",
+      "zh": "伦敦",
+      "type": "place",
+      "count": 11
+    },
+    {
+      "term": "Mary Jane",
+      "zh": "玛丽·简",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Miss Adler",
+      "zh": "阿德勒小姐",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Miss Irene Adler",
+      "zh": "艾琳·阿德勒小姐",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Mister Sherlock Holmes",
+      "zh": "歇洛克·福尔摩斯先生",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Mr. Godfrey Norton",
+      "zh": "戈弗雷·诺顿先生",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Mr. Holmes",
+      "zh": "福尔摩斯先生",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Mr. Sherlock Holmes",
+      "zh": "歇洛克·福尔摩斯先生",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Mrs. Turner",
+      "zh": "特纳太太",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "New Jersey",
+      "zh": "新泽西",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Norton",
+      "zh": "诺顿",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Odessa",
+      "zh": "敖德萨",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Ormstein",
+      "zh": "奥姆斯坦",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Prague",
+      "zh": "布拉格",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Regent Street",
+      "zh": "摄政街",
+      "type": "place",
+      "count": 2
+    },
+    {
+      "term": "Saxe-Meningen",
+      "zh": "萨克森-迈宁根",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Scandinavia",
+      "zh": "斯堪的纳维亚",
+      "type": "place",
+      "count": 2
+    },
+    {
+      "term": "Serpentine Avenue",
+      "zh": "蛇形大街",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Serpentine-mews",
+      "zh": "蛇形马厩",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Sherlock Holmes",
+      "zh": "歇洛克·福尔摩斯",
+      "type": "person",
+      "count": 12
+    },
+    {
+      "term": "St. John's Wood",
+      "zh": "圣约翰伍德",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Study in Scarlet",
+      "zh": "《血字的研究》",
+      "type": "other",
+      "count": 3
+    },
+    {
+      "term": "Temple",
+      "zh": "圣殿区",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "the King",
+      "zh": "国王",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Trepoff",
+      "zh": "特雷波夫",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Trepoff murder",
+      "zh": "特雷波夫谋杀案",
+      "type": "other",
+      "count": 1
+    },
+    {
+      "term": "Trincomalee",
+      "zh": "亭可马里",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Wallenstein",
+      "zh": "华伦斯坦",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Warsaw",
+      "zh": "华沙",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Watson",
+      "zh": "华生",
+      "type": "person",
+      "count": 9
+    },
+    {
+      "term": "Wilhelm Gottsreich Sigismond von Ormstein",
+      "zh": "威廉·戈特赖希·西吉斯蒙德·冯·奥姆斯坦",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Jabez Wilson",
+      "zh": "杰贝兹·威尔逊",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Mary Sutherland",
+      "zh": "玛丽·萨瑟兰",
+      "type": "person",
+      "count": 3
+    },
+    {
+      "term": "Ezekiah Hopkins",
+      "zh": "伊齐基尔·霍普金斯",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Duncan Ross",
+      "zh": "邓肯·罗斯",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Vincent Spaulding",
+      "zh": "文森特·斯波尔丁",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "William Morris",
+      "zh": "威廉·莫里斯",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Sarasate",
+      "zh": "萨拉萨蒂",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Peter Jones",
+      "zh": "彼得·琼斯",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Mr. Merryweather",
+      "zh": "梅里韦瑟先生",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "John Clay",
+      "zh": "约翰·克莱",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Archie",
+      "zh": "阿奇",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Gustave Flaubert",
+      "zh": "古斯塔夫·福楼拜",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "George Sand",
+      "zh": "乔治·桑",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Sholto",
+      "zh": "肖尔托",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "China",
+      "zh": "中国",
+      "type": "place",
+      "count": 2
+    },
+    {
+      "term": "Lebanon",
+      "zh": "黎巴嫩",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Pennsylvania",
+      "zh": "宾夕法尼亚",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "U.S.A.",
+      "zh": "美国",
+      "type": "place",
+      "count": 2
+    },
+    {
+      "term": "Pope’s Court",
+      "zh": "波普巷",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Fleet Street",
+      "zh": "舰队街",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Saxe-Coburg Square",
+      "zh": "萨克森-科堡广场",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "the City",
+      "zh": "伦敦城",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Attica",
+      "zh": "阿提卡",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "King Edward Street",
+      "zh": "爱德华国王街",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "St. Paul’s",
+      "zh": "圣保罗大教堂",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "the Strand",
+      "zh": "斯特兰德大街",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "St. James’s Hall",
+      "zh": "圣詹姆斯会堂",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Aldersgate",
+      "zh": "奥尔德斯盖特",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Kensington",
+      "zh": "肯辛顿",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "the Park",
+      "zh": "公园",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Oxford Street",
+      "zh": "牛津街",
+      "type": "place",
+      "count": 2
+    },
+    {
+      "term": "Farrington Street",
+      "zh": "法林顿街",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Agra",
+      "zh": "阿格拉",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Scotland",
+      "zh": "苏格兰",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Cornwall",
+      "zh": "康沃尔",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Freemasonry",
+      "zh": "共济会",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Red-headed League",
+      "zh": "红发会",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "The Morning Chronicle",
+      "zh": "《纪事晨报》",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "the Underground",
+      "zh": "地铁",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Mortimer’s",
+      "zh": "莫蒂默商店",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "City and Suburban Bank",
+      "zh": "城市与郊区银行",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "the Vegetarian Restaurant",
+      "zh": "素食餐厅",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "McFarlane’s",
+      "zh": "麦克法兰商店",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Scotland Yard",
+      "zh": "苏格兰场",
+      "type": "org",
+      "count": 5
+    },
+    {
+      "term": "Bank of France",
+      "zh": "法兰西银行",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Eton",
+      "zh": "伊顿公学",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Oxford",
+      "zh": "牛津大学",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Encyclopædia Britannica",
+      "zh": "《大英百科全书》",
+      "type": "other",
+      "count": 1
+    },
+    {
+      "term": "Irish-setter",
+      "zh": "爱尔兰雪达犬",
+      "type": "other",
+      "count": 1
+    },
+    {
+      "term": "Hosmer Angel",
+      "zh": "霍斯默·安吉尔",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "James Windibank",
+      "zh": "詹姆斯·温迪班克",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Mrs. Etherege",
+      "zh": "埃瑟里奇太太",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Mr. Hardy",
+      "zh": "哈迪先生",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Ned",
+      "zh": "内德",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Balzac",
+      "zh": "巴尔扎克",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Hafiz",
+      "zh": "哈菲兹",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Horace",
+      "zh": "贺拉斯",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Auckland",
+      "zh": "奥克兰",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "New Zealand",
+      "zh": "新西兰",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "France",
+      "zh": "法国",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Bordeaux",
+      "zh": "波尔多",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "St. Saviour's",
+      "zh": "圣救世主教堂",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "King's Cross",
+      "zh": "国王十字车站",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "St. Pancras Hotel",
+      "zh": "圣潘克拉斯旅馆",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Leadenhall Street",
+      "zh": "利德贺街",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Fenchurch Street",
+      "zh": "芬丘奇街",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Camberwell",
+      "zh": "坎伯韦尔",
+      "type": "place",
+      "count": 2
+    },
+    {
+      "term": "Lyon Place",
+      "zh": "莱昂广场",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "The Hague",
+      "zh": "海牙",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Andover",
+      "zh": "安多弗",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Tottenham Court Road",
+      "zh": "托特纳姆法院路",
+      "type": "place",
+      "count": 2
+    },
+    {
+      "term": "City",
+      "zh": "伦敦城",
+      "type": "place",
+      "count": 3
+    },
+    {
+      "term": "Marseilles",
+      "zh": "马赛",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Westhouse & Marbank",
+      "zh": "韦斯特豪斯与马班克公司",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Chronicle",
+      "zh": "《纪事晨报》",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "The Sign of Four",
+      "zh": "《四签名》",
+      "type": "other",
+      "count": 1
+    },
+    {
+      "term": "Dundas separation case",
+      "zh": "邓达斯分居案",
+      "type": "other",
+      "count": 1
+    },
+    {
+      "term": "Anstruther",
+      "zh": "安斯特拉瑟",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Charles McCarthy",
+      "zh": "查尔斯·麦卡锡",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "John Turner",
+      "zh": "约翰·特纳",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "James McCarthy",
+      "zh": "詹姆斯·麦卡锡",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "William Crowder",
+      "zh": "威廉·克劳德",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Patience Moran",
+      "zh": "佩兴斯·莫兰",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Moran",
+      "zh": "莫兰",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Lestrade",
+      "zh": "雷斯垂德",
+      "type": "person",
+      "count": 2
+    },
+    {
+      "term": "John Cobb",
+      "zh": "约翰·科布",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Dr. Willows",
+      "zh": "威洛斯医生",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Alice Turner",
+      "zh": "爱丽丝·特纳",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Baxter",
+      "zh": "巴克斯特",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Black Jack of Ballarat",
+      "zh": "巴拉腊特的黑杰克",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "George Meredith",
+      "zh": "乔治·梅瑞狄斯",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Petrarch",
+      "zh": "彼特拉克",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Paddington Station",
+      "zh": "帕丁顿车站",
+      "type": "place",
+      "count": 2
+    },
+    {
+      "term": "Reading",
+      "zh": "雷丁",
+      "type": "place",
+      "count": 3
+    },
+    {
+      "term": "Boscombe Valley",
+      "zh": "博斯科姆比溪谷",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Ross",
+      "zh": "罗斯",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Herefordshire",
+      "zh": "赫里福德郡",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Hatherley Farm",
+      "zh": "哈瑟利农场",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Boscombe Pool",
+      "zh": "博斯科姆比潭",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Hereford",
+      "zh": "赫里福德",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Swindon",
+      "zh": "斯温登",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Stroud Valley",
+      "zh": "斯特劳德山谷",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Severn",
+      "zh": "塞文河",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Australia",
+      "zh": "澳大利亚",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Bristol",
+      "zh": "布里斯托尔",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Victoria",
+      "zh": "维多利亚州",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Melbourne",
+      "zh": "墨尔本",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Ballarat",
+      "zh": "巴拉腊特",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Rotterdam",
+      "zh": "鹿特丹",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Bermuda Dockyard",
+      "zh": "百慕大船坞",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Hereford Arms",
+      "zh": "赫里福德纹章酒店",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Ballarat Gang",
+      "zh": "巴拉腊特帮",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "John Openshaw",
+      "zh": "约翰·奥彭肖",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Openshaw",
+      "zh": "奥彭肖",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Elias",
+      "zh": "伊莱亚斯",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Joseph",
+      "zh": "约瑟夫",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Colonel Openshaw",
+      "zh": "奥彭肖上校",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Major Prendergast",
+      "zh": "普伦德加斯特少校",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Clark Russell",
+      "zh": "克拉克·拉塞尔",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Mary",
+      "zh": "玛丽",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Fordham",
+      "zh": "福德姆",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Major Freebody",
+      "zh": "弗里博迪少校",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Cuvier",
+      "zh": "居维叶",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Hudson",
+      "zh": "赫德森",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "McCauley",
+      "zh": "麦考利",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Paramore",
+      "zh": "帕拉莫尔",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "John Swain",
+      "zh": "约翰·斯温",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Captain James Calhoun",
+      "zh": "詹姆斯·卡尔霍恩船长",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Lee",
+      "zh": "李",
+      "type": "person",
+      "count": 2
+    },
+    {
+      "term": "Jackson",
+      "zh": "杰克逊",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Hood",
+      "zh": "胡德",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Sholtos",
+      "zh": "肖尔托一家",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Police-Constable Cook",
+      "zh": "警员库克",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Horsham",
+      "zh": "霍舍姆",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Pondicherry",
+      "zh": "本地治里",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Dundee",
+      "zh": "邓迪",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "East London",
+      "zh": "东伦敦",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Waterloo",
+      "zh": "滑铁卢",
+      "type": "place",
+      "count": 2
+    },
+    {
+      "term": "Waterloo Bridge",
+      "zh": "滑铁卢桥",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Waterloo Station",
+      "zh": "滑铁卢车站",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Portsdown Hill",
+      "zh": "波兹当山",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Fareham",
+      "zh": "费勒姆",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "St. Augustine",
+      "zh": "圣奥古斯丁",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Tennessee",
+      "zh": "田纳西州",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Louisiana",
+      "zh": "路易斯安那州",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Carolinas",
+      "zh": "南北卡罗来纳",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Georgia",
+      "zh": "佐治亚州",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Florida",
+      "zh": "佛罗里达州",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Savannah",
+      "zh": "萨凡纳",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Texas",
+      "zh": "得克萨斯州",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Albert Dock",
+      "zh": "阿尔伯特船坞",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Gravesend",
+      "zh": "格雷夫森德",
+      "type": "place",
+      "count": 2
+    },
+    {
+      "term": "Goodwins",
+      "zh": "古德温沙洲",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Isle of Wight",
+      "zh": "怀特岛",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Atlantic",
+      "zh": "大西洋",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Union",
+      "zh": "联邦",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "America",
+      "zh": "美国",
+      "type": "place",
+      "count": 2
+    },
+    {
+      "term": "India",
+      "zh": "印度",
+      "type": "place",
+      "count": 2
+    },
+    {
+      "term": "Sussex",
+      "zh": "苏塞克斯",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Coventry",
+      "zh": "考文垂",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Uffa",
+      "zh": "乌法",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Embankment",
+      "zh": "河堤街",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "North",
+      "zh": "北方",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "South",
+      "zh": "南方",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Southern states",
+      "zh": "南方各州",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Ku Klux Klan",
+      "zh": "三K党",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "K. K. K.",
+      "zh": "三K党",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Amateur Mendicant Society",
+      "zh": "业余乞丐协会",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Paradol Chamber",
+      "zh": "帕拉多尔会馆",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Tankerville Club",
+      "zh": "坦克维尔俱乐部",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Republican",
+      "zh": "共和党人",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Lloyd's",
+      "zh": "劳埃德商船协会",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "H Division",
+      "zh": "H分局",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "United States government",
+      "zh": "美国政府",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Sophy Anderson",
+      "zh": "索菲·安德森号",
+      "type": "other",
+      "count": 1
+    },
+    {
+      "term": "Grice Patersons",
+      "zh": "格赖斯·佩特森号",
+      "type": "other",
+      "count": 1
+    },
+    {
+      "term": "Lone Star",
+      "zh": "孤星号",
+      "type": "other",
+      "count": 1
+    },
+    {
+      "term": "Sign of Four",
+      "zh": "《四签名》",
+      "type": "other",
+      "count": 1
+    },
+    {
+      "term": "American Encyclopædia",
+      "zh": "《美国百科全书》",
+      "type": "other",
+      "count": 1
+    },
+    {
+      "term": "L. S.",
+      "zh": "金币符号",
+      "type": "other",
+      "count": 1
+    },
+    {
+      "term": "Isa Whitney",
+      "zh": "艾萨·惠特尼",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Elias Whitney",
+      "zh": "伊莱亚斯·惠特尼",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "De Quincey",
+      "zh": "德·昆西",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Kate Whitney",
+      "zh": "凯特·惠特尼",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "James",
+      "zh": "詹姆斯",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Neville St. Clair",
+      "zh": "内维尔·圣克莱尔",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Mrs. St. Clair",
+      "zh": "圣克莱尔太太",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Hugh Boone",
+      "zh": "休·布恩",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Inspector Barton",
+      "zh": "巴顿巡官",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Inspector Bradstreet",
+      "zh": "布拉德斯特里特探长",
+      "type": "person",
+      "count": 3
+    },
+    {
+      "term": "Lascar",
+      "zh": "东印度水手",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Upper Swandam Lane",
+      "zh": "上斯旺达姆巷",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "London Bridge",
+      "zh": "伦敦桥",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Paul’s Wharf",
+      "zh": "保罗码头",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "The Cedars",
+      "zh": "雪松别墅",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Kent",
+      "zh": "肯特",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Middlesex",
+      "zh": "米德尔塞克斯",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Surrey",
+      "zh": "萨里",
+      "type": "place",
+      "count": 2
+    },
+    {
+      "term": "Waterloo Bridge Road",
+      "zh": "滑铁卢桥路",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Wellington Street",
+      "zh": "惠灵顿街",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Bow Street",
+      "zh": "弓街",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Chesterfield",
+      "zh": "切斯特菲尔德",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Fresno Street",
+      "zh": "弗雷斯诺街",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Threadneedle Street",
+      "zh": "针线街",
+      "type": "place",
+      "count": 2
+    },
+    {
+      "term": "Cannon Street",
+      "zh": "坎农街",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Thames",
+      "zh": "泰晤士河",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "London Road",
+      "zh": "伦敦路",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Bar of Gold",
+      "zh": "金块酒店",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Theological College of St. George’s",
+      "zh": "圣乔治神学院",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Aberdeen Shipping Company",
+      "zh": "阿伯丁航运公司",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Capital and Counties Bank",
+      "zh": "首都与郡银行",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Peterson",
+      "zh": "彼得森",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Henry Baker",
+      "zh": "亨利·贝克",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Mrs. Henry Baker",
+      "zh": "亨利·贝克太太",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "John Horner",
+      "zh": "约翰·霍纳",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "James Ryder",
+      "zh": "詹姆斯·赖德",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Catherine Cusack",
+      "zh": "凯瑟琳·丘萨克",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Countess of Morcar",
+      "zh": "莫卡伯爵夫人",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Windigate",
+      "zh": "温迪盖特",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Breckinridge",
+      "zh": "布雷肯里奇",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Bill",
+      "zh": "比尔",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Mrs. Oakshott",
+      "zh": "奥克肖特太太",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Maggie",
+      "zh": "玛吉",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Maudsley",
+      "zh": "莫兹利",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "King of Proosia",
+      "zh": "普鲁士国王",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Goodge Street",
+      "zh": "古奇街",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Amoy River",
+      "zh": "厦门河",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Wimpole Street",
+      "zh": "温波尔街",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Harley Street",
+      "zh": "哈莱街",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Wigmore Street",
+      "zh": "威格莫尔街",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Bloomsbury",
+      "zh": "布卢姆斯伯里",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Holborn",
+      "zh": "霍尔本",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Endell Street",
+      "zh": "恩德尔街",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Covent Garden",
+      "zh": "科文特花园",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Brixton Road",
+      "zh": "布里克斯顿路",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Kilburn",
+      "zh": "基尔本",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Pentonville",
+      "zh": "彭顿维尔",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Museum",
+      "zh": "博物馆",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "The Times",
+      "zh": "《泰晤士报》",
+      "type": "org",
+      "count": 2
+    },
+    {
+      "term": "Hotel Cosmopolitan",
+      "zh": "大都会饭店",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Alpha Inn",
+      "zh": "阿尔法酒馆",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Assizes",
+      "zh": "巡回法庭",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "B division",
+      "zh": "B分局",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Globe",
+      "zh": "《环球报》",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Star",
+      "zh": "《星报》",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Pall Mall",
+      "zh": "《蓓尔美尔报》",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "St. James's Gazette",
+      "zh": "《圣詹姆斯公报》",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Evening News",
+      "zh": "《新闻晚报》",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Standard",
+      "zh": "《旗帜报》",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Echo",
+      "zh": "《回声报》",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Pink 'un",
+      "zh": "《粉红报》",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Christmas",
+      "zh": "圣诞节",
+      "type": "other",
+      "count": 1
+    },
+    {
+      "term": "Mrs. Hudson",
+      "zh": "赫德森太太",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Dr. Grimesby Roylott",
+      "zh": "格里姆斯比·罗伊洛特医生",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Helen Stoner",
+      "zh": "海伦·斯托纳",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Julia Stoner",
+      "zh": "朱莉娅·斯托纳",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Mrs. Farintosh",
+      "zh": "法林托什太太",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Major-General Stoner",
+      "zh": "斯托纳少将",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Honoria Westphail",
+      "zh": "霍诺里亚·韦斯特法尔",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Percy Armitage",
+      "zh": "珀西·阿米蒂奇",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Mr. Armitage",
+      "zh": "阿米蒂奇先生",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Palmer",
+      "zh": "帕尔默",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Pritchard",
+      "zh": "普里查德",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Roylotts",
+      "zh": "罗伊洛特家族",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Stoke Moran",
+      "zh": "斯托克莫兰",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Leatherhead",
+      "zh": "莱瑟黑德",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Berkshire",
+      "zh": "伯克郡",
+      "type": "place",
+      "count": 2
+    },
+    {
+      "term": "Hampshire",
+      "zh": "汉普郡",
+      "type": "place",
+      "count": 2
+    },
+    {
+      "term": "Calcutta",
+      "zh": "加尔各答",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Crewe",
+      "zh": "克鲁",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Harrow",
+      "zh": "哈罗",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Crane Water",
+      "zh": "克兰沃特",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Crown Inn",
+      "zh": "皇冠旅店",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Bengal Artillery",
+      "zh": "孟加拉炮兵队",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Doctors' Commons",
+      "zh": "民法博士协会",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "The Regency",
+      "zh": "摄政时代",
+      "type": "other",
+      "count": 1
+    },
+    {
+      "term": "Eley's No. 2",
+      "zh": "埃利二号子弹",
+      "type": "other",
+      "count": 1
+    },
+    {
+      "term": "Victor Hatherley",
+      "zh": "维克托·哈瑟利",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Colonel Warburton",
+      "zh": "沃伯顿上校",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Colonel Lysander Stark",
+      "zh": "莱桑德·斯塔克上校",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Mr. Ferguson",
+      "zh": "弗格森先生",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Fritz",
+      "zh": "弗里茨",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Elise",
+      "zh": "伊莉丝",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Dr. Becher",
+      "zh": "贝歇尔医生",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Jeremiah Hayling",
+      "zh": "杰里迈亚·海林",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Victoria Street",
+      "zh": "维多利亚街",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Greenwich",
+      "zh": "格林尼治",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Eyford",
+      "zh": "艾福德",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Eyford Station",
+      "zh": "艾福德车站",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Oxfordshire",
+      "zh": "牛津郡",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Venner & Matheson",
+      "zh": "文纳与马西森公司",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Lord St. Simon",
+      "zh": "圣西蒙勋爵",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Lord Backwater",
+      "zh": "贝克沃特勋爵",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Duke of Balmoral",
+      "zh": "巴尔莫勒尔公爵",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Duchess of Balmoral",
+      "zh": "巴尔莫勒尔公爵夫人",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Hatty Doran",
+      "zh": "哈蒂·多兰",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Aloysius Doran",
+      "zh": "阿洛伊修斯·多兰",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Lady Clara St. Simon",
+      "zh": "克拉拉·圣西蒙夫人",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Lord Eustace St. Simon",
+      "zh": "尤斯塔斯·圣西蒙勋爵",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Lady Alicia Whittington",
+      "zh": "艾丽西亚·惠廷顿夫人",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Flora Millar",
+      "zh": "弗洛拉·米勒",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Alice",
+      "zh": "爱丽丝",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Francis Hay Moulton",
+      "zh": "弗朗西斯·海·莫尔顿",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Thoreau",
+      "zh": "梭罗",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "San Francisco",
+      "zh": "旧金山",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Frisco",
+      "zh": "旧金山",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "California",
+      "zh": "加利福尼亚",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Grosvenor Mansions",
+      "zh": "格罗夫纳公馆",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Grosvenor Square",
+      "zh": "格罗夫纳广场",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Hanover Square",
+      "zh": "汉诺威广场",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "St. George's",
+      "zh": "圣乔治教堂",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Lancaster Gate",
+      "zh": "兰开斯特门",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Westbury House",
+      "zh": "韦斯特伯里公馆",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Birchmoor",
+      "zh": "伯奇穆尔",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Petersfield",
+      "zh": "彼得斯菲尔德",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Hyde Park",
+      "zh": "海德公园",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Serpentine",
+      "zh": "蛇形湖",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Trafalgar Square",
+      "zh": "特拉法加广场",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Gordon Square",
+      "zh": "戈登广场",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Northumberland Avenue",
+      "zh": "诺森伯兰大街",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Aberdeen",
+      "zh": "阿伯丁",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Munich",
+      "zh": "慕尼黑",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Arizona",
+      "zh": "亚利桑那",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Montana",
+      "zh": "蒙大拿",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "New Mexico",
+      "zh": "新墨西哥",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Rockies",
+      "zh": "落基山脉",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Paris",
+      "zh": "巴黎",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Balmoral",
+      "zh": "巴尔莫勒尔",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "McQuire's camp",
+      "zh": "麦奎尔营地",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Morning Post",
+      "zh": "《晨邮报》",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Allegro",
+      "zh": "快板俱乐部",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Arabian Nights",
+      "zh": "《天方夜谭》",
+      "type": "other",
+      "count": 1
+    },
+    {
+      "term": "Union Jack",
+      "zh": "英国国旗",
+      "type": "other",
+      "count": 1
+    },
+    {
+      "term": "Stars and Stripes",
+      "zh": "星条旗",
+      "type": "other",
+      "count": 1
+    },
+    {
+      "term": "Plantagenet",
+      "zh": "金雀花王朝",
+      "type": "other",
+      "count": 1
+    },
+    {
+      "term": "Tudor",
+      "zh": "都铎王朝",
+      "type": "other",
+      "count": 1
+    },
+    {
+      "term": "Franco-Prussian War",
+      "zh": "普法战争",
+      "type": "other",
+      "count": 1
+    },
+    {
+      "term": "Apache",
+      "zh": "阿帕切人",
+      "type": "other",
+      "count": 1
+    },
+    {
+      "term": "Alexander Holder",
+      "zh": "亚历山大·霍尔德",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Arthur Holder",
+      "zh": "阿瑟·霍尔德",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Mary Holder",
+      "zh": "玛丽·霍尔德",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Lucy Parr",
+      "zh": "露西·帕尔",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Sir George Burnwell",
+      "zh": "乔治·伯恩韦尔爵士",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Francis Prosper",
+      "zh": "弗朗西斯·普罗斯珀",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Metropolitan Station",
+      "zh": "大都会车站",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "City of London",
+      "zh": "伦敦城",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Streatham",
+      "zh": "斯特里汉姆",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Fairbank",
+      "zh": "费尔班克",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "West End",
+      "zh": "西区",
+      "type": "place",
+      "count": 2
+    },
+    {
+      "term": "Holder & Stevenson",
+      "zh": "霍尔德与史蒂文森公司",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Beryl Coronet",
+      "zh": "绿玉王冠",
+      "type": "other",
+      "count": 1
+    },
+    {
+      "term": "Violet Hunter",
+      "zh": "维奥莱特·亨特",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Colonel Spence Munro",
+      "zh": "斯彭斯·芒罗上校",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Miss Stoper",
+      "zh": "斯托珀小姐",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Jephro Rucastle",
+      "zh": "杰弗罗·鲁卡斯尔",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Mrs. Rucastle",
+      "zh": "鲁卡斯尔太太",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Alice Rucastle",
+      "zh": "爱丽丝·鲁卡斯尔",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Edward",
+      "zh": "爱德华",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Toller",
+      "zh": "托勒",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Mrs. Toller",
+      "zh": "托勒太太",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Lord Southerton",
+      "zh": "索瑟顿勋爵",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Mr. Fowler",
+      "zh": "福勒先生",
+      "type": "person",
+      "count": 1
+    },
+    {
+      "term": "Carlo",
+      "zh": "卡洛",
+      "type": "other",
+      "count": 1
+    },
+    {
+      "term": "Bradshaw",
+      "zh": "《布雷德肖铁路指南》",
+      "type": "other",
+      "count": 1
+    },
+    {
+      "term": "Blue Carbuncle",
+      "zh": "蓝宝石",
+      "type": "other",
+      "count": 1
+    },
+    {
+      "term": "The Daily Telegraph",
+      "zh": "《每日电讯报》",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Westaway's",
+      "zh": "韦斯塔韦商店",
+      "type": "org",
+      "count": 1
+    },
+    {
+      "term": "Winchester",
+      "zh": "温切斯特",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "The Copper Beeches",
+      "zh": "铜山毛榉庄园",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Southampton",
+      "zh": "南安普敦",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Southampton Road",
+      "zh": "南安普敦路",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Aldershot",
+      "zh": "奥尔德肖特",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Montague Place",
+      "zh": "蒙塔古街",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "High Street",
+      "zh": "高街",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Nova Scotia",
+      "zh": "新斯科舍",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Halifax",
+      "zh": "哈利法克斯",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Philadelphia",
+      "zh": "费城",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Mauritius",
+      "zh": "毛里求斯",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Walsall",
+      "zh": "沃尔索尔",
+      "type": "place",
+      "count": 1
+    },
+    {
+      "term": "Black Swan Hotel",
+      "zh": "黑天鹅旅馆",
+      "type": "place",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,2453 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "夏洛克·福尔摩斯",
+      "aliases": [
+        "福尔摩斯"
+      ],
+      "identity": "私家咨询侦探",
+      "first_seen_chapter": 0
+    },
+    {
+      "id": 2,
+      "name": "约翰·华生",
+      "aliases": [
+        "华生",
+        "医生"
+      ],
+      "identity": "医生，福尔摩斯的朋友",
+      "first_seen_chapter": 0
+    },
+    {
+      "id": 3,
+      "name": "艾琳·阿德勒",
+      "aliases": [
+        "那位女人"
+      ],
+      "identity": "歌剧女歌手，冒险家",
+      "first_seen_chapter": 0
+    },
+    {
+      "id": 4,
+      "name": "威廉·戈特赖希·西格斯蒙德·冯·奥姆斯坦",
+      "aliases": [
+        "波希米亚国王",
+        "冯·克拉姆伯爵"
+      ],
+      "identity": "波希米亚世袭国王",
+      "first_seen_chapter": 0
+    },
+    {
+      "id": 5,
+      "name": "戈弗雷·诺顿",
+      "aliases": [],
+      "identity": "律师，艾琳的丈夫",
+      "first_seen_chapter": 0
+    },
+    {
+      "id": 6,
+      "name": "克洛蒂尔德·洛特曼·冯·萨克斯-迈宁根",
+      "aliases": [],
+      "identity": "斯堪的纳维亚国王的次女，波希米亚国王的未婚妻",
+      "first_seen_chapter": 0
+    },
+    {
+      "id": 15,
+      "name": "约翰",
+      "aliases": [
+        "车夫",
+        "车夫约翰"
+      ],
+      "identity": "艾琳·阿德勒的车夫",
+      "first_seen_chapter": 0
+    },
+    {
+      "id": 16,
+      "name": "老妇人",
+      "aliases": [
+        "老女仆"
+      ],
+      "identity": "布里奥尼别墅的女仆",
+      "first_seen_chapter": 0
+    },
+    {
+      "id": 25,
+      "name": "杰贝兹·威尔逊",
+      "aliases": [],
+      "identity": "当铺老板",
+      "first_seen_chapter": 1
+    },
+    {
+      "id": 26,
+      "name": "约翰·克莱",
+      "aliases": [
+        "文森特·斯波尔丁"
+      ],
+      "identity": "窃贼、伪造犯，冒充当铺伙计",
+      "first_seen_chapter": 1
+    },
+    {
+      "id": 27,
+      "name": "邓肯·罗斯",
+      "aliases": [
+        "威廉·莫里斯",
+        "阿奇"
+      ],
+      "identity": "红发会经理，约翰·克莱的同伙",
+      "first_seen_chapter": 1
+    },
+    {
+      "id": 28,
+      "name": "彼得·琼斯",
+      "aliases": [],
+      "identity": "苏格兰场警探",
+      "first_seen_chapter": 1
+    },
+    {
+      "id": 29,
+      "name": "梅里韦瑟",
+      "aliases": [],
+      "identity": "银行董事",
+      "first_seen_chapter": 1
+    },
+    {
+      "id": 44,
+      "name": "玛丽·萨瑟兰",
+      "aliases": [
+        "萨瑟兰小姐"
+      ],
+      "identity": "有独立收入的近视打字员",
+      "first_seen_chapter": 2
+    },
+    {
+      "id": 45,
+      "name": "詹姆斯·温迪班克",
+      "aliases": [
+        "霍斯默·安杰尔"
+      ],
+      "identity": "葡萄酒推销员，玛丽·萨瑟兰的继父",
+      "first_seen_chapter": 2
+    },
+    {
+      "id": 48,
+      "name": "约翰·特纳",
+      "aliases": [
+        "巴拉腊特的黑杰克",
+        "黑杰克"
+      ],
+      "identity": "博斯科姆比谷地主，前澳大利亚金矿主",
+      "first_seen_chapter": 3
+    },
+    {
+      "id": 49,
+      "name": "查尔斯·麦卡锡",
+      "aliases": [],
+      "identity": "哈瑟利农场佃户，从澳大利亚回国定居",
+      "first_seen_chapter": 3
+    },
+    {
+      "id": 50,
+      "name": "詹姆斯·麦卡锡",
+      "aliases": [
+        "小麦卡锡"
+      ],
+      "identity": "查尔斯·麦卡锡之子，18岁",
+      "first_seen_chapter": 3
+    },
+    {
+      "id": 51,
+      "name": "特纳小姐",
+      "aliases": [
+        "艾丽斯"
+      ],
+      "identity": "约翰·特纳的独生女",
+      "first_seen_chapter": 3
+    },
+    {
+      "id": 52,
+      "name": "莱斯特雷德",
+      "aliases": [],
+      "identity": "苏格兰场侦探",
+      "first_seen_chapter": 3
+    },
+    {
+      "id": 53,
+      "name": "威廉·克劳德",
+      "aliases": [],
+      "identity": "特纳先生雇用的猎场看守人",
+      "first_seen_chapter": 3
+    },
+    {
+      "id": 54,
+      "name": "佩兴斯·莫兰",
+      "aliases": [],
+      "identity": "博斯科姆比谷庄园门房看守的女儿，14岁",
+      "first_seen_chapter": 3
+    },
+    {
+      "id": 55,
+      "name": "约翰·科布",
+      "aliases": [],
+      "identity": "麦卡锡家的马夫",
+      "first_seen_chapter": 3
+    },
+    {
+      "id": 56,
+      "name": "威洛斯医生",
+      "aliases": [],
+      "identity": "特纳先生的医生",
+      "first_seen_chapter": 3
+    },
+    {
+      "id": 57,
+      "name": "女仆",
+      "aliases": [],
+      "identity": "哈瑟利农场的女仆",
+      "first_seen_chapter": 3
+    },
+    {
+      "id": 58,
+      "name": "安斯特拉瑟",
+      "aliases": [],
+      "identity": "医生，华生的同行",
+      "first_seen_chapter": 3
+    },
+    {
+      "id": 59,
+      "name": "酒吧女招待",
+      "aliases": [],
+      "identity": "詹姆斯·麦卡锡在布里斯托尔秘密结婚的妻子，后得知婚姻无效",
+      "first_seen_chapter": 3
+    },
+    {
+      "id": 85,
+      "name": "约翰·奥彭肖",
+      "aliases": [],
+      "identity": "委托人，奥彭肖家族第三代",
+      "first_seen_chapter": 4
+    },
+    {
+      "id": 86,
+      "name": "伊莱亚斯·奥彭肖",
+      "aliases": [
+        "上校"
+      ],
+      "identity": "约翰的伯父，前南方邦联军上校，佛罗里达种植园主",
+      "first_seen_chapter": 4
+    },
+    {
+      "id": 87,
+      "name": "约瑟夫·奥彭肖",
+      "aliases": [],
+      "identity": "约翰的父亲，工厂主",
+      "first_seen_chapter": 4
+    },
+    {
+      "id": 88,
+      "name": "彭德加斯特少校",
+      "aliases": [],
+      "identity": "介绍约翰向福尔摩斯求助的人",
+      "first_seen_chapter": 4
+    },
+    {
+      "id": 89,
+      "name": "福德姆",
+      "aliases": [
+        "福德姆律师"
+      ],
+      "identity": "替伊莱亚斯·奥彭肖立遗嘱的律师",
+      "first_seen_chapter": 4
+    },
+    {
+      "id": 90,
+      "name": "弗里博迪少校",
+      "aliases": [],
+      "identity": "约瑟夫的朋友，波特斯当山要塞指挥官",
+      "first_seen_chapter": 4
+    },
+    {
+      "id": 91,
+      "name": "詹姆斯·卡尔霍恩",
+      "aliases": [
+        "卡尔霍恩船长"
+      ],
+      "identity": "三K党头目，“孤星号”三桅帆船船长",
+      "first_seen_chapter": 4
+    },
+    {
+      "id": 92,
+      "name": "库克",
+      "aliases": [
+        "警员库克"
+      ],
+      "identity": "H分局警员，发现约翰落水",
+      "first_seen_chapter": 4
+    },
+    {
+      "id": 106,
+      "name": "艾萨·惠特尼",
+      "aliases": [],
+      "identity": "鸦片瘾者，凯特的丈夫，华生的病人",
+      "first_seen_chapter": 5
+    },
+    {
+      "id": 107,
+      "name": "凯特·惠特尼",
+      "aliases": [],
+      "identity": "艾萨·惠特尼的妻子，华生妻子的朋友",
+      "first_seen_chapter": 5
+    },
+    {
+      "id": 108,
+      "name": "内维尔·圣克莱尔",
+      "aliases": [
+        "休·布恩"
+      ],
+      "identity": "李镇乡绅，伪装成乞丐休·布恩",
+      "first_seen_chapter": 5
+    },
+    {
+      "id": 109,
+      "name": "圣克莱尔太太",
+      "aliases": [],
+      "identity": "内维尔·圣克莱尔的妻子",
+      "first_seen_chapter": 5
+    },
+    {
+      "id": 110,
+      "name": "巴顿探长",
+      "aliases": [],
+      "identity": "负责调查内维尔·圣克莱尔失踪案的探长",
+      "first_seen_chapter": 5
+    },
+    {
+      "id": 111,
+      "name": "布拉德斯特里特探长",
+      "aliases": [],
+      "identity": "弓街警局探长，关押休·布恩",
+      "first_seen_chapter": 5
+    },
+    {
+      "id": 112,
+      "name": "拉斯卡人",
+      "aliases": [
+        "印度水手"
+      ],
+      "identity": "上斯旺丹巷鸦片烟馆老板",
+      "first_seen_chapter": 5
+    },
+    {
+      "id": 113,
+      "name": "丹麦人",
+      "aliases": [],
+      "identity": "烟馆帮工，协助拉斯卡人推搡圣克莱尔太太",
+      "first_seen_chapter": 5
+    },
+    {
+      "id": 127,
+      "name": "彼得森",
+      "aliases": [
+        "看门人"
+      ],
+      "identity": "福尔摩斯的看门人",
+      "first_seen_chapter": 6
+    },
+    {
+      "id": 128,
+      "name": "亨利·贝克",
+      "aliases": [],
+      "identity": "博物馆职员，鹅俱乐部会员",
+      "first_seen_chapter": 6
+    },
+    {
+      "id": 129,
+      "name": "莫卡伯爵夫人",
+      "aliases": [],
+      "identity": "蓝宝石失主",
+      "first_seen_chapter": 6
+    },
+    {
+      "id": 130,
+      "name": "约翰·霍纳",
+      "aliases": [],
+      "identity": "水管工，被控盗窃蓝宝石",
+      "first_seen_chapter": 6
+    },
+    {
+      "id": 131,
+      "name": "詹姆斯·赖德",
+      "aliases": [
+        "约翰·鲁滨逊"
+      ],
+      "identity": "世界酒店领班，盗窃蓝宝石的真凶",
+      "first_seen_chapter": 6
+    },
+    {
+      "id": 132,
+      "name": "凯瑟琳·库萨克",
+      "aliases": [],
+      "identity": "莫卡伯爵夫人的女仆",
+      "first_seen_chapter": 6
+    },
+    {
+      "id": 133,
+      "name": "温迪盖特",
+      "aliases": [],
+      "identity": "阿尔法旅馆老板",
+      "first_seen_chapter": 6
+    },
+    {
+      "id": 134,
+      "name": "布雷肯里奇",
+      "aliases": [],
+      "identity": "科文特花园禽贩",
+      "first_seen_chapter": 6
+    },
+    {
+      "id": 135,
+      "name": "奥克肖特太太",
+      "aliases": [],
+      "identity": "家禽供应商，詹姆斯·赖德的姐姐",
+      "first_seen_chapter": 6
+    },
+    {
+      "id": 154,
+      "name": "海伦·斯托纳",
+      "aliases": [
+        "斯托纳小姐"
+      ],
+      "identity": "罗伊洛特医生的继女，委托人",
+      "first_seen_chapter": 7
+    },
+    {
+      "id": 155,
+      "name": "格里姆斯比·罗伊洛特",
+      "aliases": [
+        "罗伊洛特医生",
+        "斯托克莫兰的罗伊洛特"
+      ],
+      "identity": "医生，海伦的继父，暴虐的贵族后裔",
+      "first_seen_chapter": 7
+    },
+    {
+      "id": 156,
+      "name": "朱莉娅·斯托纳",
+      "aliases": [
+        "朱莉娅"
+      ],
+      "identity": "海伦的孪生姐姐，已故",
+      "first_seen_chapter": 7
+    },
+    {
+      "id": 157,
+      "name": "赫德森太太",
+      "aliases": [],
+      "identity": "贝克街房东",
+      "first_seen_chapter": 7
+    },
+    {
+      "id": 158,
+      "name": "法林托什太太",
+      "aliases": [],
+      "identity": "福尔摩斯的前客户，蛋白石头冠案委托人",
+      "first_seen_chapter": 7
+    },
+    {
+      "id": 159,
+      "name": "奥诺里娅·韦斯特费尔",
+      "aliases": [
+        "韦斯特费尔小姐"
+      ],
+      "identity": "海伦和朱莉娅的姨妈，居住在哈罗",
+      "first_seen_chapter": 7
+    },
+    {
+      "id": 160,
+      "name": "斯托纳太太",
+      "aliases": [
+        "母亲"
+      ],
+      "identity": "海伦和朱莉娅的母亲，已故，罗伊洛特的亡妻",
+      "first_seen_chapter": 7
+    },
+    {
+      "id": 161,
+      "name": "管家",
+      "aliases": [],
+      "identity": "罗伊洛特家的老女管家",
+      "first_seen_chapter": 7
+    },
+    {
+      "id": 181,
+      "name": "哈瑟利先生",
+      "aliases": [
+        "水利工程师"
+      ],
+      "identity": "水利工程师，患者",
+      "first_seen_chapter": 8
+    },
+    {
+      "id": 182,
+      "name": "莱桑德·斯塔克",
+      "aliases": [
+        "上校",
+        "弗里茨"
+      ],
+      "identity": "造假币团伙头目",
+      "first_seen_chapter": 8
+    },
+    {
+      "id": 183,
+      "name": "弗格森",
+      "aliases": [
+        "弗格森先生"
+      ],
+      "identity": "斯塔克的秘书兼经理，同伙",
+      "first_seen_chapter": 8
+    },
+    {
+      "id": 184,
+      "name": "埃莉斯",
+      "aliases": [],
+      "identity": "斯塔克的情人或妻子，曾救助哈瑟利",
+      "first_seen_chapter": 8
+    },
+    {
+      "id": 185,
+      "name": "杰里迈亚·海林",
+      "aliases": [],
+      "identity": "一年前失踪的水力工程师",
+      "first_seen_chapter": 8
+    },
+    {
+      "id": 186,
+      "name": "比彻医生",
+      "aliases": [],
+      "identity": "英国医生，房屋被烧",
+      "first_seen_chapter": 8
+    },
+    {
+      "id": 200,
+      "name": "罗伯特·圣西蒙",
+      "aliases": [
+        "圣西蒙勋爵",
+        "罗伯特·圣西蒙勋爵"
+      ],
+      "identity": "巴尔莫勒尔公爵次子，前殖民地副大臣",
+      "first_seen_chapter": 9
+    },
+    {
+      "id": 201,
+      "name": "哈蒂·多兰",
+      "aliases": [
+        "多兰小姐",
+        "圣西蒙夫人"
+      ],
+      "identity": "加利福尼亚百万富翁阿洛伊修斯·多兰的独生女，弗朗西斯·海·莫尔顿之妻",
+      "first_seen_chapter": 9
+    },
+    {
+      "id": 202,
+      "name": "弗洛拉·米勒",
+      "aliases": [
+        "弗洛拉"
+      ],
+      "identity": "阿莱格罗舞女，圣西蒙勋爵的前情妇",
+      "first_seen_chapter": 9
+    },
+    {
+      "id": 203,
+      "name": "弗朗西斯·海·莫尔顿",
+      "aliases": [
+        "弗兰克",
+        "莫尔顿先生"
+      ],
+      "identity": "哈蒂·多兰在采矿营的旧情人，实际丈夫",
+      "first_seen_chapter": 9
+    },
+    {
+      "id": 204,
+      "name": "阿洛伊修斯·多兰",
+      "aliases": [
+        "多兰先生"
+      ],
+      "identity": "哈蒂·多兰的父亲，旧金山百万富翁",
+      "first_seen_chapter": 9
+    },
+    {
+      "id": 205,
+      "name": "巴尔莫勒尔公爵",
+      "aliases": [],
+      "identity": "罗伯特·圣西蒙的父亲，前外交大臣",
+      "first_seen_chapter": 9
+    },
+    {
+      "id": 206,
+      "name": "巴尔莫勒尔公爵夫人",
+      "aliases": [],
+      "identity": "罗伯特·圣西蒙的母亲",
+      "first_seen_chapter": 9
+    },
+    {
+      "id": 207,
+      "name": "巴克沃特勋爵",
+      "aliases": [],
+      "identity": "彼得斯菲尔德附近宅邸主人，圣西蒙勋爵的朋友",
+      "first_seen_chapter": 9
+    },
+    {
+      "id": 208,
+      "name": "尤斯塔斯勋爵",
+      "aliases": [],
+      "identity": "圣西蒙勋爵的弟弟",
+      "first_seen_chapter": 9
+    },
+    {
+      "id": 209,
+      "name": "克拉拉·圣西蒙",
+      "aliases": [
+        "克拉拉·圣西蒙小姐"
+      ],
+      "identity": "圣西蒙勋爵的妹妹",
+      "first_seen_chapter": 9
+    },
+    {
+      "id": 210,
+      "name": "艾丽西亚·惠廷顿",
+      "aliases": [
+        "艾丽西亚·惠廷顿小姐"
+      ],
+      "identity": "婚礼宾客",
+      "first_seen_chapter": 9
+    },
+    {
+      "id": 223,
+      "name": "亚历山大·霍尔德",
+      "aliases": [
+        "霍尔德"
+      ],
+      "identity": "针线街霍尔德与史蒂文森银行合伙人",
+      "first_seen_chapter": 10
+    },
+    {
+      "id": 224,
+      "name": "阿瑟·霍尔德",
+      "aliases": [
+        "阿瑟"
+      ],
+      "identity": "亚历山大·霍尔德的儿子",
+      "first_seen_chapter": 10
+    },
+    {
+      "id": 225,
+      "name": "玛丽·霍尔德",
+      "aliases": [
+        "玛丽"
+      ],
+      "identity": "亚历山大·霍尔德的侄女",
+      "first_seen_chapter": 10
+    },
+    {
+      "id": 226,
+      "name": "乔治·伯恩韦尔",
+      "aliases": [
+        "乔治·伯恩韦尔爵士",
+        "伯恩韦尔"
+      ],
+      "identity": "恶棍赌徒，阿瑟的朋友，玛丽的秘密情人",
+      "first_seen_chapter": 10
+    },
+    {
+      "id": 227,
+      "name": "露西·帕尔",
+      "aliases": [
+        "露西"
+      ],
+      "identity": "霍尔德的第二贴身女仆",
+      "first_seen_chapter": 10
+    },
+    {
+      "id": 228,
+      "name": "弗朗西斯·普罗斯珀",
+      "aliases": [
+        "普罗斯珀"
+      ],
+      "identity": "菜贩，露西·帕尔的相好，装木腿",
+      "first_seen_chapter": 10
+    },
+    {
+      "id": 244,
+      "name": "维奥莱特·亨特",
+      "aliases": [
+        "亨特小姐"
+      ],
+      "identity": "家庭教师",
+      "first_seen_chapter": 11
+    },
+    {
+      "id": 245,
+      "name": "杰弗罗·鲁卡斯尔",
+      "aliases": [
+        "鲁卡斯尔先生"
+      ],
+      "identity": "铜山毛榉庄园的主人",
+      "first_seen_chapter": 11
+    },
+    {
+      "id": 246,
+      "name": "斯托珀小姐",
+      "aliases": [],
+      "identity": "家庭教师介绍所女经理",
+      "first_seen_chapter": 11
+    },
+    {
+      "id": 247,
+      "name": "鲁卡斯尔太太",
+      "aliases": [],
+      "identity": "杰弗罗·鲁卡斯尔的妻子",
+      "first_seen_chapter": 11
+    },
+    {
+      "id": 248,
+      "name": "托勒",
+      "aliases": [],
+      "identity": "男仆",
+      "first_seen_chapter": 11
+    },
+    {
+      "id": 249,
+      "name": "托勒太太",
+      "aliases": [],
+      "identity": "女仆",
+      "first_seen_chapter": 11
+    },
+    {
+      "id": 250,
+      "name": "小爱德华",
+      "aliases": [],
+      "identity": "鲁卡斯尔夫妇的儿子，六岁",
+      "first_seen_chapter": 11
+    },
+    {
+      "id": 251,
+      "name": "爱丽丝·鲁卡斯尔",
+      "aliases": [],
+      "identity": "鲁卡斯尔夫妇的女儿，据称在费城",
+      "first_seen_chapter": 11
+    },
+    {
+      "id": 252,
+      "name": "蓄须男子",
+      "aliases": [],
+      "identity": "可能是爱丽丝·鲁卡斯尔的未婚夫或恋人",
+      "first_seen_chapter": 11
+    },
+    {
+      "id": 266,
+      "name": "歇洛克·福尔摩斯",
+      "aliases": [],
+      "identity": null,
+      "first_seen_chapter": 11
+    },
+    {
+      "id": 269,
+      "name": "福勒先生",
+      "aliases": [
+        "蓄须男子"
+      ],
+      "identity": "鲁卡斯尔小姐的情人，后成为其丈夫",
+      "first_seen_chapter": 11
+    },
+    {
+      "id": 270,
+      "name": "乡间医生",
+      "aliases": [],
+      "identity": "医生，被召来救治受伤的鲁卡斯尔",
+      "first_seen_chapter": 11
+    }
+  ],
+  "relationships": [
+    {
+      "id": 7,
+      "from_char_id": 4,
+      "to_char_id": 1,
+      "type": "委托人",
+      "reveal_chapter": 0,
+      "description": "国王委托福尔摩斯找回被艾琳·阿德勒持有的照片"
+    },
+    {
+      "id": 8,
+      "from_char_id": 1,
+      "to_char_id": 2,
+      "type": "朋友",
+      "reveal_chapter": 0,
+      "description": "福尔摩斯称华生为朋友兼同事，华生记录福尔摩斯的案件"
+    },
+    {
+      "id": 9,
+      "from_char_id": 4,
+      "to_char_id": 3,
+      "type": "旧情人",
+      "reveal_chapter": 0,
+      "description": "国王五年前在华沙与艾琳有过恋情，并写了可能招致麻烦的信件和合照"
+    },
+    {
+      "id": 10,
+      "from_char_id": 3,
+      "to_char_id": 5,
+      "type": "夫妻",
+      "reveal_chapter": 0,
+      "description": "艾琳与戈弗雷·诺顿在本章中结婚，福尔摩斯是证婚人"
+    },
+    {
+      "id": 11,
+      "from_char_id": 4,
+      "to_char_id": 6,
+      "type": "未婚夫妻",
+      "reveal_chapter": 0,
+      "description": "国王即将与克洛蒂尔德公主结婚，担心艾琳的照片破坏婚事"
+    },
+    {
+      "id": 30,
+      "from_char_id": 1,
+      "to_char_id": 2,
+      "type": "朋友与助手",
+      "reveal_chapter": 1,
+      "description": "福尔摩斯称华生为伙伴和帮手，华生记录福尔摩斯的案件"
+    },
+    {
+      "id": 31,
+      "from_char_id": 26,
+      "to_char_id": 25,
+      "type": "雇员（伪装）",
+      "reveal_chapter": 1,
+      "description": "化名文森特·斯波尔丁，受雇为威尔逊的伙计，实为密谋盗窃"
+    },
+    {
+      "id": 32,
+      "from_char_id": 26,
+      "to_char_id": 27,
+      "type": "同伙",
+      "reveal_chapter": 1,
+      "description": "共同策划红发会骗局和银行盗窃"
+    },
+    {
+      "id": 33,
+      "from_char_id": 1,
+      "to_char_id": 28,
+      "type": "合作追捕",
+      "reveal_chapter": 1,
+      "description": "福尔摩斯联合琼斯设伏抓捕约翰·克莱"
+    },
+    {
+      "id": 34,
+      "from_char_id": 1,
+      "to_char_id": 29,
+      "type": "合作",
+      "reveal_chapter": 1,
+      "description": "银行董事协助福尔摩斯在银行地下室设伏"
+    },
+    {
+      "id": 35,
+      "from_char_id": 28,
+      "to_char_id": 26,
+      "type": "追捕",
+      "reveal_chapter": 1,
+      "description": "琼斯追踪约翰·克莱多年，今晚将其抓获"
+    },
+    {
+      "id": 36,
+      "from_char_id": 25,
+      "to_char_id": 1,
+      "type": "客户",
+      "reveal_chapter": 1,
+      "description": "威尔逊因红发会解散向福尔摩斯求助"
+    },
+    {
+      "id": 42,
+      "from_char_id": 1,
+      "to_char_id": 26,
+      "type": "宿敌",
+      "reveal_chapter": 1,
+      "description": "福尔摩斯声称与克莱有旧账要清算。"
+    },
+    {
+      "id": 46,
+      "from_char_id": 45,
+      "to_char_id": 44,
+      "type": "继父与欺骗性婚约",
+      "reveal_chapter": 2,
+      "description": "温迪班克化名霍斯默·安杰尔与萨瑟兰订婚，并在婚礼当天失踪；实为继父"
+    },
+    {
+      "id": 60,
+      "from_char_id": 48,
+      "to_char_id": 49,
+      "type": "朋友/佃户关系",
+      "reveal_chapter": 3,
+      "description": "两人在澳大利亚相识，特纳是麦卡锡的地主，但关系平等，经常往来"
+    },
+    {
+      "id": 61,
+      "from_char_id": 49,
+      "to_char_id": 50,
+      "type": "父子",
+      "reveal_chapter": 3,
+      "description": "查尔斯·麦卡锡是詹姆斯·麦卡锡的父亲"
+    },
+    {
+      "id": 62,
+      "from_char_id": 48,
+      "to_char_id": 51,
+      "type": "父女",
+      "reveal_chapter": 3,
+      "description": "特纳小姐是约翰·特纳的独生女"
+    },
+    {
+      "id": 63,
+      "from_char_id": 51,
+      "to_char_id": 50,
+      "type": "青梅竹马",
+      "reveal_chapter": 3,
+      "description": "特纳小姐与詹姆斯·麦卡锡从小一起长大，她爱他，相信他无辜"
+    },
+    {
+      "id": 64,
+      "from_char_id": 52,
+      "to_char_id": 51,
+      "type": "委托",
+      "reveal_chapter": 3,
+      "description": "特纳小姐委托莱斯特雷德为詹姆斯·麦卡锡洗清嫌疑"
+    },
+    {
+      "id": 65,
+      "from_char_id": 52,
+      "to_char_id": 1,
+      "type": "合作调查",
+      "reveal_chapter": 3,
+      "description": "莱斯特雷德将博斯科姆比谷案转给福尔摩斯，两人共同调查"
+    },
+    {
+      "id": 66,
+      "from_char_id": 50,
+      "to_char_id": 59,
+      "type": "婚姻",
+      "reveal_chapter": 3,
+      "description": "詹姆斯·麦卡锡在布里斯托尔与酒吧女招待秘密结婚，但后来得知她已有丈夫，婚姻无效"
+    },
+    {
+      "id": 67,
+      "from_char_id": 49,
+      "to_char_id": 51,
+      "type": "希望儿子联姻",
+      "reveal_chapter": 3,
+      "description": "查尔斯·麦卡锡希望儿子詹姆斯与特纳小姐结婚，但约翰·特纳反对"
+    },
+    {
+      "id": 68,
+      "from_char_id": 1,
+      "to_char_id": 51,
+      "type": "受委托",
+      "reveal_chapter": 3,
+      "description": "特纳小姐请求福尔摩斯调查案件，福尔摩斯答应帮助"
+    },
+    {
+      "id": 69,
+      "from_char_id": 53,
+      "to_char_id": 48,
+      "type": "雇佣",
+      "reveal_chapter": 3,
+      "description": "威廉·克劳德是特纳先生雇用的猎场看守"
+    },
+    {
+      "id": 70,
+      "from_char_id": 57,
+      "to_char_id": 49,
+      "type": "雇佣",
+      "reveal_chapter": 3,
+      "description": "女仆是哈瑟利农场的仆人"
+    },
+    {
+      "id": 71,
+      "from_char_id": 55,
+      "to_char_id": 49,
+      "type": "雇佣",
+      "reveal_chapter": 3,
+      "description": "约翰·科布是麦卡锡家的马夫"
+    },
+    {
+      "id": 72,
+      "from_char_id": 56,
+      "to_char_id": 48,
+      "type": "医生与病人",
+      "reveal_chapter": 3,
+      "description": "威洛斯医生为特纳先生看病"
+    },
+    {
+      "id": 79,
+      "from_char_id": 48,
+      "to_char_id": 49,
+      "type": "同伙",
+      "reveal_chapter": 3,
+      "description": "六十年代初在澳大利亚同为巴拉腊特帮成员，一起抢劫黄金运输队"
+    },
+    {
+      "id": 80,
+      "from_char_id": 49,
+      "to_char_id": 48,
+      "type": "勒索",
+      "reveal_chapter": 3,
+      "description": "麦卡锡认出特纳后，以揭发其强盗过去为要挟，迫使特纳为其提供庄园住处和工作"
+    },
+    {
+      "id": 81,
+      "from_char_id": 48,
+      "to_char_id": 49,
+      "type": "杀害",
+      "reveal_chapter": 3,
+      "description": "特纳在博斯科姆比溪谷树林中从背后袭击麦卡锡，致其死亡"
+    },
+    {
+      "id": 93,
+      "from_char_id": 85,
+      "to_char_id": 86,
+      "type": "叔侄",
+      "reveal_chapter": 4,
+      "description": "伊莱亚斯是约翰的伯父"
+    },
+    {
+      "id": 94,
+      "from_char_id": 85,
+      "to_char_id": 87,
+      "type": "父子",
+      "reveal_chapter": 4,
+      "description": "约瑟夫是约翰的父亲"
+    },
+    {
+      "id": 95,
+      "from_char_id": 86,
+      "to_char_id": 87,
+      "type": "兄弟",
+      "reveal_chapter": 4,
+      "description": "伊莱亚斯与约瑟夫是亲兄弟"
+    },
+    {
+      "id": 96,
+      "from_char_id": 85,
+      "to_char_id": 1,
+      "type": "委托",
+      "reveal_chapter": 4,
+      "description": "约翰向福尔摩斯求助，讲述家族遭遇"
+    },
+    {
+      "id": 97,
+      "from_char_id": 88,
+      "to_char_id": 85,
+      "type": "朋友",
+      "reveal_chapter": 4,
+      "description": "彭德加斯特少校建议约翰找福尔摩斯"
+    },
+    {
+      "id": 98,
+      "from_char_id": 91,
+      "to_char_id": 86,
+      "type": "追杀",
+      "reveal_chapter": 4,
+      "description": "卡尔霍恩代表三K党取回文件，导致伊莱亚斯死亡"
+    },
+    {
+      "id": 99,
+      "from_char_id": 91,
+      "to_char_id": 87,
+      "type": "追杀",
+      "reveal_chapter": 4,
+      "description": "卡尔霍恩代表三K党追杀约瑟夫，导致其死亡"
+    },
+    {
+      "id": 100,
+      "from_char_id": 91,
+      "to_char_id": 85,
+      "type": "谋杀",
+      "reveal_chapter": 4,
+      "description": "卡尔霍恩策划并实施了对约翰的谋杀"
+    },
+    {
+      "id": 114,
+      "from_char_id": 106,
+      "to_char_id": 107,
+      "type": "夫妻",
+      "reveal_chapter": 5,
+      "description": "凯特因艾萨两天未归寻求华生帮助"
+    },
+    {
+      "id": 115,
+      "from_char_id": 2,
+      "to_char_id": 106,
+      "type": "医生与病人",
+      "reveal_chapter": 5,
+      "description": "华生称自己是艾萨的医生，去烟馆找他"
+    },
+    {
+      "id": 116,
+      "from_char_id": 108,
+      "to_char_id": 109,
+      "type": "夫妻",
+      "reveal_chapter": 5,
+      "description": "圣克莱尔太太在家苦等，后收到平安信"
+    },
+    {
+      "id": 117,
+      "from_char_id": 1,
+      "to_char_id": 108,
+      "type": "调查对象",
+      "reveal_chapter": 5,
+      "description": "福尔摩斯伪装在烟馆调查圣克莱尔失踪案"
+    },
+    {
+      "id": 118,
+      "from_char_id": 108,
+      "to_char_id": 112,
+      "type": "同谋",
+      "reveal_chapter": 5,
+      "description": "圣克莱尔（扮作休·布恩）与拉斯卡人串通否认其进入房间"
+    },
+    {
+      "id": 119,
+      "from_char_id": 111,
+      "to_char_id": 108,
+      "type": "关押",
+      "reveal_chapter": 5,
+      "description": "布拉德斯特里特关押了扮成休·布恩的内维尔·圣克莱尔"
+    },
+    {
+      "id": 125,
+      "from_char_id": 108,
+      "to_char_id": 112,
+      "type": "房东与租客",
+      "reveal_chapter": 5,
+      "description": "圣克莱尔在拉斯卡人的烟馆租房间进行伪装，拉斯卡人替他保守秘密并收取高额房钱"
+    },
+    {
+      "id": 136,
+      "from_char_id": 1,
+      "to_char_id": 127,
+      "type": "熟人",
+      "reveal_chapter": 6,
+      "description": "彼得森是福尔摩斯的看门人，将捡到的帽子和鹅带给福尔摩斯检查"
+    },
+    {
+      "id": 137,
+      "from_char_id": 128,
+      "to_char_id": 133,
+      "type": "俱乐部会员与经营者",
+      "reveal_chapter": 6,
+      "description": "贝克是阿尔法旅馆鹅俱乐部会员，从温迪盖特处领取圣诞鹅"
+    },
+    {
+      "id": 138,
+      "from_char_id": 133,
+      "to_char_id": 134,
+      "type": "买卖关系",
+      "reveal_chapter": 6,
+      "description": "温迪盖特从布雷肯里奇处购买了两打鹅"
+    },
+    {
+      "id": 139,
+      "from_char_id": 134,
+      "to_char_id": 135,
+      "type": "买卖关系",
+      "reveal_chapter": 6,
+      "description": "布雷肯里奇从奥克肖特太太处购买鹅"
+    },
+    {
+      "id": 140,
+      "from_char_id": 131,
+      "to_char_id": 135,
+      "type": "姐弟",
+      "reveal_chapter": 6,
+      "description": "奥克肖特太太是詹姆斯·赖德的姐姐"
+    },
+    {
+      "id": 141,
+      "from_char_id": 131,
+      "to_char_id": 132,
+      "type": "同谋",
+      "reveal_chapter": 6,
+      "description": "赖德与凯瑟琳·库萨克合谋盗窃蓝宝石"
+    },
+    {
+      "id": 142,
+      "from_char_id": 129,
+      "to_char_id": 132,
+      "type": "主仆",
+      "reveal_chapter": 6,
+      "description": "凯瑟琳·库萨克是莫卡伯爵夫人的女仆"
+    },
+    {
+      "id": 143,
+      "from_char_id": 1,
+      "to_char_id": 128,
+      "type": "失物招领",
+      "reveal_chapter": 6,
+      "description": "福尔摩斯通过启事将帽子和鹅归还给亨利·贝克"
+    },
+    {
+      "id": 144,
+      "from_char_id": 1,
+      "to_char_id": 131,
+      "type": "破案关系",
+      "reveal_chapter": 6,
+      "description": "福尔摩斯揭穿赖德的盗窃罪行并听取坦白"
+    },
+    {
+      "id": 162,
+      "from_char_id": 154,
+      "to_char_id": 155,
+      "type": "继父女",
+      "reveal_chapter": 7,
+      "description": "海伦和姐姐随母亲改嫁罗伊洛特，母亲去世后与他共同生活在斯托克莫兰"
+    },
+    {
+      "id": 163,
+      "from_char_id": 154,
+      "to_char_id": 156,
+      "type": "姐妹",
+      "reveal_chapter": 7,
+      "description": "孪生姐妹"
+    },
+    {
+      "id": 164,
+      "from_char_id": 154,
+      "to_char_id": 159,
+      "type": "姨甥",
+      "reveal_chapter": 7,
+      "description": "奥诺里娅是海伦母亲的未婚妹妹"
+    },
+    {
+      "id": 165,
+      "from_char_id": 155,
+      "to_char_id": 160,
+      "type": "夫妻",
+      "reveal_chapter": 7,
+      "description": "罗伊洛特在印度娶了斯托纳太太，后来妻子在火车事故中去世"
+    },
+    {
+      "id": 166,
+      "from_char_id": 154,
+      "to_char_id": 160,
+      "type": "母女",
+      "reveal_chapter": 7,
+      "description": "海伦和朱莉娅是斯托纳太太与前夫所生"
+    },
+    {
+      "id": 167,
+      "from_char_id": 158,
+      "to_char_id": 1,
+      "type": "前客户",
+      "reveal_chapter": 7,
+      "description": "法林托什太太曾委托福尔摩斯处理蛋白石头冠案，并推荐海伦来找福尔摩斯"
+    },
+    {
+      "id": 168,
+      "from_char_id": 157,
+      "to_char_id": 1,
+      "type": "房东与房客",
+      "reveal_chapter": 7,
+      "description": "赫德森太太是贝克街的房东，福尔摩斯和华生租住在此"
+    },
+    {
+      "id": 177,
+      "from_char_id": 155,
+      "to_char_id": 154,
+      "type": "谋害",
+      "reveal_chapter": 7,
+      "description": "罗伊洛特医生通过两个房间之间的通气孔放出沼泽蝰蛇，意图杀害正在睡觉的继女海伦·斯托纳，福尔摩斯通过固定在地上的床、假铃绳和通气孔推断出作案手法。"
+    },
+    {
+      "id": 178,
+      "from_char_id": 155,
+      "to_char_id": 156,
+      "type": "杀害",
+      "reveal_chapter": 7,
+      "description": "罗伊洛特医生曾用同样的手法通过通气孔放蛇残忍杀害了海伦的姐姐朱莉娅·斯托纳，朱莉娅死前曾说‘斑点带子’，海伦闻到雪茄味暗示了房间相通。"
+    },
+    {
+      "id": 187,
+      "from_char_id": 182,
+      "to_char_id": 181,
+      "type": "雇佣，谋杀未遂",
+      "reveal_chapter": 8,
+      "description": "斯塔克以修理水压机为名雇佣哈瑟利，实为造假币，意图灭口并砍掉其拇指"
+    },
+    {
+      "id": 188,
+      "from_char_id": 184,
+      "to_char_id": 181,
+      "type": "救命恩人",
+      "reveal_chapter": 8,
+      "description": "埃莉斯两次警告哈瑟利危险，并帮助他从水压机室和窗口逃脱"
+    },
+    {
+      "id": 189,
+      "from_char_id": 182,
+      "to_char_id": 184,
+      "type": "情侣或夫妻",
+      "reveal_chapter": 8,
+      "description": "埃莉斯称斯塔克为弗里茨，并搂住他阻止其追捕，关系亲密"
+    },
+    {
+      "id": 190,
+      "from_char_id": 182,
+      "to_char_id": 183,
+      "type": "同伙",
+      "reveal_chapter": 8,
+      "description": "弗格森是斯塔克上校的秘书兼经理，共同参与造假币活动"
+    },
+    {
+      "id": 191,
+      "from_char_id": 1,
+      "to_char_id": 181,
+      "type": "寻求帮助",
+      "reveal_chapter": 8,
+      "description": "福尔摩斯听取哈瑟利的遭遇并协助警方破案"
+    },
+    {
+      "id": 192,
+      "from_char_id": 2,
+      "to_char_id": 181,
+      "type": "医生与病人",
+      "reveal_chapter": 8,
+      "description": "华生为哈瑟利处理拇指伤口并带他去见福尔摩斯"
+    },
+    {
+      "id": 211,
+      "from_char_id": 203,
+      "to_char_id": 201,
+      "type": "夫妻",
+      "reveal_chapter": 9,
+      "description": "哈蒂在采矿营时已与莫尔顿秘密结婚，本章揭露其真实婚姻关系。"
+    },
+    {
+      "id": 212,
+      "from_char_id": 200,
+      "to_char_id": 201,
+      "type": "名义夫妻",
+      "reveal_chapter": 9,
+      "description": "在圣乔治教堂举行了婚礼，但因哈蒂重婚，婚姻无效。"
+    },
+    {
+      "id": 213,
+      "from_char_id": 202,
+      "to_char_id": 200,
+      "type": "旧情人",
+      "reveal_chapter": 9,
+      "description": "弗洛拉是舞女，与圣西蒙勋爵有多年关系，曾写恐吓信威胁其婚事。"
+    },
+    {
+      "id": 214,
+      "from_char_id": 204,
+      "to_char_id": 201,
+      "type": "父女",
+      "reveal_chapter": 9,
+      "description": "阿洛伊修斯是哈蒂的父亲。"
+    },
+    {
+      "id": 215,
+      "from_char_id": 205,
+      "to_char_id": 200,
+      "type": "父子",
+      "reveal_chapter": 9,
+      "description": "巴尔莫勒尔公爵是圣西蒙勋爵的父亲。"
+    },
+    {
+      "id": 216,
+      "from_char_id": 201,
+      "to_char_id": 51,
+      "type": "主仆",
+      "reveal_chapter": 9,
+      "description": "艾丽斯是哈蒂从加利福尼亚带来的贴身女仆，哈蒂失踪前曾向她透露真相。"
+    },
+    {
+      "id": 229,
+      "from_char_id": 223,
+      "to_char_id": 224,
+      "type": "父子",
+      "reveal_chapter": 10,
+      "description": "亚历山大·霍尔德是阿瑟·霍尔德的父亲。"
+    },
+    {
+      "id": 230,
+      "from_char_id": 223,
+      "to_char_id": 225,
+      "type": "伯父与侄女",
+      "reveal_chapter": 10,
+      "description": "玛丽是亚历山大·霍尔德的侄女，由其抚养。"
+    },
+    {
+      "id": 231,
+      "from_char_id": 224,
+      "to_char_id": 225,
+      "type": "单恋",
+      "reveal_chapter": 10,
+      "description": "阿瑟曾两次向玛丽求婚，均被拒绝。"
+    },
+    {
+      "id": 232,
+      "from_char_id": 225,
+      "to_char_id": 226,
+      "type": "秘密情人",
+      "reveal_chapter": 10,
+      "description": "玛丽与乔治·伯恩韦尔有私情，并一同私奔。"
+    },
+    {
+      "id": 233,
+      "from_char_id": 227,
+      "to_char_id": 228,
+      "type": "情人",
+      "reveal_chapter": 10,
+      "description": "露西·帕尔与菜贩弗朗西斯·普罗斯珀相好，每晚会面。"
+    },
+    {
+      "id": 234,
+      "from_char_id": 223,
+      "to_char_id": 1,
+      "type": "委托人与顾问",
+      "reveal_chapter": 10,
+      "description": "霍尔德委托福尔摩斯调查王冠宝石失踪案。"
+    },
+    {
+      "id": 235,
+      "from_char_id": 226,
+      "to_char_id": 224,
+      "type": "损友",
+      "reveal_chapter": 10,
+      "description": "乔治·伯恩韦尔爵士是阿瑟的朋友，对阿瑟有不良影响。"
+    },
+    {
+      "id": 239,
+      "from_char_id": 224,
+      "to_char_id": 225,
+      "type": "爱慕",
+      "reveal_chapter": 10,
+      "description": "阿瑟深爱表姐，因而保守她偷窃的秘密。"
+    },
+    {
+      "id": 240,
+      "from_char_id": 225,
+      "to_char_id": 226,
+      "type": "情人",
+      "reveal_chapter": 10,
+      "description": "玛丽与乔治·伯恩韦尔有私情，帮助他盗取冠冕。"
+    },
+    {
+      "id": 241,
+      "from_char_id": 223,
+      "to_char_id": 224,
+      "type": "误解消除",
+      "reveal_chapter": 10,
+      "description": "霍尔德先生得知真相后，意识到自己错怪了儿子。"
+    },
+    {
+      "id": 253,
+      "from_char_id": 245,
+      "to_char_id": 244,
+      "type": "雇主",
+      "reveal_chapter": 11,
+      "description": "以每年120英镑的高薪聘请她为家庭教师，并附加剪发、穿特定衣服等奇怪条件"
+    },
+    {
+      "id": 254,
+      "from_char_id": 245,
+      "to_char_id": 247,
+      "type": "夫妻",
+      "reveal_chapter": 11,
+      "description": "两人共同居住于铜山毛榉庄园"
+    },
+    {
+      "id": 255,
+      "from_char_id": 245,
+      "to_char_id": 250,
+      "type": "父子",
+      "reveal_chapter": 11,
+      "description": "六岁男孩，性格残忍"
+    },
+    {
+      "id": 256,
+      "from_char_id": 247,
+      "to_char_id": 250,
+      "type": "母子",
+      "reveal_chapter": 11,
+      "description": "小爱德华的母亲"
+    },
+    {
+      "id": 257,
+      "from_char_id": 245,
+      "to_char_id": 251,
+      "type": "父女",
+      "reveal_chapter": 11,
+      "description": "据称已去费城，但疑似被囚禁"
+    },
+    {
+      "id": 258,
+      "from_char_id": 247,
+      "to_char_id": 251,
+      "type": "母女",
+      "reveal_chapter": 11,
+      "description": "爱丽丝的母亲"
+    },
+    {
+      "id": 259,
+      "from_char_id": 248,
+      "to_char_id": 249,
+      "type": "夫妻",
+      "reveal_chapter": 11,
+      "description": "两人均为鲁卡斯尔家的仆人"
+    },
+    {
+      "id": 260,
+      "from_char_id": 252,
+      "to_char_id": 251,
+      "type": "恋人",
+      "reveal_chapter": 11,
+      "description": "福尔摩斯推测他是爱丽丝的未婚夫，因维奥莱特种扮相似而误以为爱丽丝过得快乐"
+    },
+    {
+      "id": 271,
+      "from_char_id": 269,
+      "to_char_id": 251,
+      "type": "夫妻",
+      "reveal_chapter": 11,
+      "description": "福勒先生和鲁卡斯尔小姐在出逃的第二天凭特别许可证结婚"
+    },
+    {
+      "id": 272,
+      "from_char_id": 249,
+      "to_char_id": 251,
+      "type": "帮助",
+      "reveal_chapter": 11,
+      "description": "托勒太太暗中协助爱丽丝与福勒私奔"
+    }
+  ],
+  "events": [
+    {
+      "id": 12,
+      "description": "波希米亚国王微服拜访福尔摩斯，委托其找回可能会破坏王室婚约的照片。",
+      "occur_chapter": 0,
+      "reveal_chapter": 0,
+      "involved": [
+        4,
+        1,
+        2
+      ]
+    },
+    {
+      "id": 13,
+      "description": "艾琳·阿德勒与戈弗雷·诺顿在圣莫尼卡教堂紧急结婚，福尔摩斯被临时拉去充当证婚人。",
+      "occur_chapter": 0,
+      "reveal_chapter": 0,
+      "involved": [
+        3,
+        5,
+        1
+      ]
+    },
+    {
+      "id": 14,
+      "description": "福尔摩斯伪装受伤，被抬入艾琳家中，利用烟雾弹制造失火假象，诱使艾琳暴露照片藏匿位置。",
+      "occur_chapter": 0,
+      "reveal_chapter": 0,
+      "involved": [
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "id": 17,
+      "description": "福尔摩斯在艾琳家中制造假火警，诱使艾琳冲向照片暗格，暴露了其隐藏位置。",
+      "occur_chapter": 0,
+      "reveal_chapter": 0,
+      "involved": [
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "id": 18,
+      "description": "福尔摩斯看到照片位置后，由于车夫约翰在场盯着他，决定暂不取走照片。",
+      "occur_chapter": 0,
+      "reveal_chapter": 0,
+      "involved": [
+        1,
+        15
+      ]
+    },
+    {
+      "id": 19,
+      "description": "艾琳·阿德勒识破福尔摩斯的计谋，换上男装尾随福尔摩斯和华生到贝克街，以青年声音向他们道晚安。",
+      "occur_chapter": 0,
+      "reveal_chapter": 0,
+      "involved": [
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "id": 20,
+      "description": "波希米亚国王急切前来，得知艾琳已婚，与福尔摩斯、华生一起前往布里奥尼别墅。",
+      "occur_chapter": 0,
+      "reveal_chapter": 0,
+      "involved": [
+        4,
+        1,
+        2
+      ]
+    },
+    {
+      "id": 21,
+      "description": "老妇人告知福尔摩斯等人，艾琳·阿德勒已与戈弗雷·诺顿结婚并离开英国。",
+      "occur_chapter": 0,
+      "reveal_chapter": 0,
+      "involved": [
+        16,
+        1,
+        4,
+        2
+      ]
+    },
+    {
+      "id": 22,
+      "description": "福尔摩斯在别墅壁炉架暗格中找到艾琳的照片和她留给福尔摩斯的信。",
+      "occur_chapter": 0,
+      "reveal_chapter": 0,
+      "involved": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": 23,
+      "description": "福尔摩斯、华生和国王阅读艾琳的信，信中说明她已识别福尔摩斯，因保护自己而离开，并声明爱自己的丈夫。",
+      "occur_chapter": 0,
+      "reveal_chapter": 0,
+      "involved": [
+        1,
+        2,
+        4,
+        3
+      ]
+    },
+    {
+      "id": 24,
+      "description": "波希米亚国王提出以祖母绿戒指作为酬谢，福尔摩斯请求获得艾琳的照片作为酬劳，国王同意。",
+      "occur_chapter": 0,
+      "reveal_chapter": 0,
+      "involved": [
+        1,
+        4
+      ]
+    },
+    {
+      "id": 37,
+      "description": "杰贝兹·威尔逊被招募进红发会，每日抄写百科全书，持续八周",
+      "occur_chapter": 1,
+      "reveal_chapter": 1,
+      "involved": [
+        25,
+        26,
+        27
+      ]
+    },
+    {
+      "id": 38,
+      "description": "红发会突然宣布解散，威尔逊发现上当",
+      "occur_chapter": 1,
+      "reveal_chapter": 1,
+      "involved": [
+        25
+      ]
+    },
+    {
+      "id": 39,
+      "description": "威尔逊向福尔摩斯求助，讲述离奇经历",
+      "occur_chapter": 1,
+      "reveal_chapter": 1,
+      "involved": [
+        25,
+        1,
+        2
+      ]
+    },
+    {
+      "id": 40,
+      "description": "福尔摩斯与华生前往萨克斯-科堡广场调查，观察当铺及周边，确认地道存在",
+      "occur_chapter": 1,
+      "reveal_chapter": 1,
+      "involved": [
+        1,
+        2,
+        26
+      ]
+    },
+    {
+      "id": 41,
+      "description": "福尔摩斯组织抓捕行动，在银行地下室抓获约翰·克莱和邓肯·罗斯，阻止法国黄金被盗",
+      "occur_chapter": 1,
+      "reveal_chapter": 1,
+      "involved": [
+        1,
+        2,
+        28,
+        29,
+        26,
+        27
+      ]
+    },
+    {
+      "id": 43,
+      "description": "约翰·克莱和同伙挖地道企图抢劫城市与郊区银行，被福尔摩斯和警方当场抓获。",
+      "occur_chapter": 1,
+      "reveal_chapter": 1,
+      "involved": [
+        26,
+        27,
+        25,
+        29,
+        28,
+        1,
+        2
+      ]
+    },
+    {
+      "id": 47,
+      "description": "福尔摩斯揭露詹姆斯·温迪班克假扮霍斯默·安杰尔向玛丽·萨瑟兰求婚，并在婚礼当天制造失踪的骗局。",
+      "occur_chapter": 2,
+      "reveal_chapter": 2,
+      "involved": [
+        45,
+        44,
+        1,
+        2
+      ]
+    },
+    {
+      "id": 73,
+      "description": "查尔斯·麦卡锡在博斯科姆比塘遭钝器重击头部致死",
+      "occur_chapter": 3,
+      "reveal_chapter": 3,
+      "involved": [
+        49
+      ]
+    },
+    {
+      "id": 74,
+      "description": "詹姆斯·麦卡锡因涉嫌谋杀父亲被捕，并被裁定蓄意谋杀移交巡回裁判所",
+      "occur_chapter": 3,
+      "reveal_chapter": 3,
+      "involved": [
+        50,
+        49
+      ]
+    },
+    {
+      "id": 75,
+      "description": "特纳小姐赶到赫里福德阿姆斯旅馆，恳求福尔摩斯为詹姆斯·麦卡锡洗清嫌疑",
+      "occur_chapter": 3,
+      "reveal_chapter": 3,
+      "involved": [
+        51,
+        1,
+        2,
+        52
+      ]
+    },
+    {
+      "id": 76,
+      "description": "福尔摩斯在博斯科姆比塘勘察现场，通过足迹和痕迹推断出凶手特征",
+      "occur_chapter": 3,
+      "reveal_chapter": 3,
+      "involved": [
+        1,
+        52,
+        2
+      ]
+    },
+    {
+      "id": 77,
+      "description": "福尔摩斯向华生分析案件，指出凶手是来自澳大利亚巴拉腊特、穿灰色斗篷的人",
+      "occur_chapter": 3,
+      "reveal_chapter": 3,
+      "involved": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 78,
+      "description": "福尔摩斯向华生揭示詹姆斯·麦卡锡与酒吧女招待的秘密婚姻及其中隐情",
+      "occur_chapter": 3,
+      "reveal_chapter": 3,
+      "involved": [
+        50,
+        1,
+        59
+      ]
+    },
+    {
+      "id": 82,
+      "description": "约翰·特纳（巴拉腊特的黑杰克）带领巴拉腊特帮在澳大利亚袭击黄金运输队，与骑警枪战，劫得黄金后逃回英格兰",
+      "occur_chapter": 0,
+      "reveal_chapter": 3,
+      "involved": [
+        48,
+        49
+      ]
+    },
+    {
+      "id": 83,
+      "description": "约翰·特纳在博斯科姆比溪谷树林中跟踪并杀害查尔斯·麦卡锡",
+      "occur_chapter": 2,
+      "reveal_chapter": 3,
+      "involved": [
+        48,
+        49
+      ]
+    },
+    {
+      "id": 84,
+      "description": "约翰·特纳向福尔摩斯和华生坦白罪行并签署供词，福尔摩斯承诺保密",
+      "occur_chapter": 3,
+      "reveal_chapter": 3,
+      "involved": [
+        48,
+        1,
+        2
+      ]
+    },
+    {
+      "id": 101,
+      "description": "伊莱亚斯·奥彭肖收到装有五颗干橘核和KKK字样的警告信，七周后被发现溺死于池塘，陪审团裁定自杀，实为三K党谋杀。",
+      "occur_chapter": 4,
+      "reveal_chapter": 4,
+      "involved": [
+        86
+      ]
+    },
+    {
+      "id": 102,
+      "description": "约瑟夫·奥彭肖收到五颗橘核和KKK警告信，三天后失足跌入白垩矿坑身亡，被认定为意外，实为三K党谋杀。",
+      "occur_chapter": 4,
+      "reveal_chapter": 4,
+      "involved": [
+        87
+      ]
+    },
+    {
+      "id": 103,
+      "description": "约翰·奥彭肖收到五颗橘核和KKK警告信，两天后于滑铁卢桥落水身亡，表面意外，实为三K党谋杀。",
+      "occur_chapter": 4,
+      "reveal_chapter": 4,
+      "involved": [
+        85
+      ]
+    },
+    {
+      "id": 104,
+      "description": "夏洛克·福尔摩斯调查案件，通过船舶登记追踪到“孤星号”和船长詹姆斯·卡尔霍恩，并向其寄出五颗橘核作为报复。",
+      "occur_chapter": 4,
+      "reveal_chapter": 4,
+      "involved": [
+        1,
+        91
+      ]
+    },
+    {
+      "id": 105,
+      "description": "“孤星号”在海上沉没，詹姆斯·卡尔霍恩等人全部遇难，未能收到福尔摩斯的警告信。",
+      "occur_chapter": 4,
+      "reveal_chapter": 4,
+      "involved": [
+        91
+      ]
+    },
+    {
+      "id": 120,
+      "description": "华生在鸦片烟馆找到濒临崩溃的艾萨·惠特尼并用马车送他回家",
+      "occur_chapter": 5,
+      "reveal_chapter": 5,
+      "involved": [
+        2,
+        106
+      ]
+    },
+    {
+      "id": 121,
+      "description": "福尔摩斯伪装成老人在烟馆调查内维尔·圣克莱尔失踪案，与华生偶遇并透露案情",
+      "occur_chapter": 5,
+      "reveal_chapter": 5,
+      "involved": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 122,
+      "description": "福尔摩斯和华生赶往肯特郡雪松别墅，圣克莱尔太太出示丈夫当天从格雷夫森德寄来的信",
+      "occur_chapter": 5,
+      "reveal_chapter": 5,
+      "involved": [
+        1,
+        2,
+        109
+      ]
+    },
+    {
+      "id": 123,
+      "description": "福尔摩斯在弓街警局用海绵擦掉休·布恩脸上的污垢与伪装，揭露他就是内维尔·圣克莱尔",
+      "occur_chapter": 5,
+      "reveal_chapter": 5,
+      "involved": [
+        1,
+        2,
+        108,
+        111
+      ]
+    },
+    {
+      "id": 124,
+      "description": "内维尔·圣克莱尔周一在上斯旺丹巷烟馆伪装跳窗失踪，遗落衣物和装满硬币的大衣",
+      "occur_chapter": 5,
+      "reveal_chapter": 5,
+      "involved": [
+        108,
+        109,
+        112,
+        110
+      ]
+    },
+    {
+      "id": 126,
+      "description": "内维尔·圣克莱尔坦白自己伪装成乞丐休·布恩乞讨为生，并解释被捕当天妻子突然出现导致他匆忙丢弃外衣和铜板，最终被警方当作杀害自己的凶手逮捕。",
+      "occur_chapter": 5,
+      "reveal_chapter": 5,
+      "involved": [
+        108,
+        1,
+        2,
+        111,
+        109,
+        112
+      ]
+    },
+    {
+      "id": 145,
+      "description": "圣诞节凌晨，彼得森在托特纳姆法院路捡到一顶旧帽子和一只鹅，是亨利·贝克与流氓冲突后丢弃的。",
+      "occur_chapter": 6,
+      "reveal_chapter": 6,
+      "involved": [
+        127,
+        128
+      ]
+    },
+    {
+      "id": 146,
+      "description": "福尔摩斯通过帽子演绎出亨利·贝克的智力、经济状况、生活习惯等个人特征。",
+      "occur_chapter": 6,
+      "reveal_chapter": 6,
+      "involved": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 147,
+      "description": "彼得森的妻子在鹅的嗉囊中发现莫卡伯爵夫人失窃的蓝宝石，福尔摩斯确认宝石身份并决定登报寻找失主。",
+      "occur_chapter": 6,
+      "reveal_chapter": 6,
+      "involved": [
+        127,
+        1,
+        2
+      ]
+    },
+    {
+      "id": 148,
+      "description": "亨利·贝克回应启事，认领帽子和鹅，并透露鹅来自阿尔法旅馆的鹅俱乐部。",
+      "occur_chapter": 6,
+      "reveal_chapter": 6,
+      "involved": [
+        128,
+        1,
+        2
+      ]
+    },
+    {
+      "id": 149,
+      "description": "福尔摩斯和华生追查鹅的来源，从温迪盖特处得知鹅购自布雷肯里奇，布雷肯里奇又购自奥克肖特太太。",
+      "occur_chapter": 6,
+      "reveal_chapter": 6,
+      "involved": [
+        1,
+        2,
+        133,
+        134
+      ]
+    },
+    {
+      "id": 150,
+      "description": "詹姆斯·赖德在科文特花园追查鹅的下落后被福尔摩斯带回贝克街，坦白他与凯瑟琳·库萨克合谋盗窃蓝宝石，并将宝石塞入鹅嘴，但鹅被姐姐奥克肖特太太误送至市场。",
+      "occur_chapter": 6,
+      "reveal_chapter": 6,
+      "involved": [
+        131,
+        1,
+        2,
+        132,
+        135
+      ]
+    },
+    {
+      "id": 151,
+      "description": "世界酒店蓝宝石被盗，水管工约翰·霍纳被冤枉逮捕，证据指向他，但真凶为詹姆斯·赖德。",
+      "occur_chapter": 6,
+      "reveal_chapter": 6,
+      "involved": [
+        129,
+        130,
+        131,
+        132,
+        111
+      ]
+    },
+    {
+      "id": 152,
+      "description": "福尔摩斯没有将偷窃蓝宝石的詹姆斯·赖德送交警方，而是让他离开，并认为他不会再犯。",
+      "occur_chapter": 6,
+      "reveal_chapter": 6,
+      "involved": [
+        1,
+        131
+      ]
+    },
+    {
+      "id": 153,
+      "description": "福尔摩斯提到即将开始一项新的调查，其中一只鸟会是主要特色。",
+      "occur_chapter": 6,
+      "reveal_chapter": 6,
+      "involved": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 169,
+      "description": "海伦·斯托纳清晨来到贝克街，向福尔摩斯和华生求助，讲述姐姐的离奇死亡和自己听到的诡异口哨声，以及继父的威胁。",
+      "occur_chapter": 7,
+      "reveal_chapter": 7,
+      "involved": [
+        154,
+        1,
+        2
+      ]
+    },
+    {
+      "id": 170,
+      "description": "格里姆斯比·罗伊洛特闯入贝克街，威胁福尔摩斯不要插手他的家事，并展示暴力。",
+      "occur_chapter": 7,
+      "reveal_chapter": 7,
+      "involved": [
+        155,
+        1,
+        2
+      ]
+    },
+    {
+      "id": 171,
+      "description": "福尔摩斯调查遗嘱，发现罗伊洛特有强烈的经济动机阻止继女结婚。",
+      "occur_chapter": 7,
+      "reveal_chapter": 7,
+      "involved": [
+        1
+      ]
+    },
+    {
+      "id": 172,
+      "description": "福尔摩斯和华生前往斯托克莫兰，与海伦会合，检查房间发现虚设的拉铃绳、不通外的通气孔、牛奶碟和鞭子绳圈等线索。",
+      "occur_chapter": 7,
+      "reveal_chapter": 7,
+      "involved": [
+        1,
+        2,
+        154
+      ]
+    },
+    {
+      "id": 173,
+      "description": "朱莉娅·斯托纳在婚礼前两周的夜晚，听到口哨声和金属声后，在房门口抽搐死亡，临终前说出‘那条带子！那条斑点带子！’。",
+      "occur_chapter": 7,
+      "reveal_chapter": 7,
+      "involved": [
+        156,
+        154,
+        155
+      ]
+    },
+    {
+      "id": 174,
+      "description": "海伦·斯托纳在姐姐死后搬入她的房间，也听到低低的口哨声，十分恐惧。",
+      "occur_chapter": 7,
+      "reveal_chapter": 7,
+      "involved": [
+        154
+      ]
+    },
+    {
+      "id": 175,
+      "description": "罗伊洛特曾将铁匠扔进河里，并打伤海伦（手腕有青紫指印），性格暴虐。",
+      "occur_chapter": 7,
+      "reveal_chapter": 7,
+      "involved": [
+        155,
+        154
+      ]
+    },
+    {
+      "id": 176,
+      "description": "福尔摩斯与华生计划当晚在海伦房间内蹲守，以查明真相。",
+      "occur_chapter": 7,
+      "reveal_chapter": 7,
+      "involved": [
+        1,
+        2,
+        154
+      ]
+    },
+    {
+      "id": 179,
+      "description": "格里姆斯比·罗伊洛特通过卧室通气孔放出沼泽蝰蛇企图杀害海伦·斯托纳，福尔摩斯用藤杖攻蛇，蛇被激怒后返回咬死罗伊洛特。",
+      "occur_chapter": 7,
+      "reveal_chapter": 7,
+      "involved": [
+        155,
+        154,
+        1,
+        2
+      ]
+    },
+    {
+      "id": 180,
+      "description": "格里姆斯比·罗伊洛特曾用同样手法通过通气孔放蛇杀害朱莉娅·斯托纳。",
+      "occur_chapter": 6,
+      "reveal_chapter": 7,
+      "involved": [
+        155,
+        156
+      ]
+    },
+    {
+      "id": 193,
+      "description": "哈瑟利被莱桑德·斯塔克雇佣前往艾福德，发现水压机实际用于造假币，险些被液压机压死，逃跑时拇指被砍掉，在埃莉斯帮助下跳窗逃走，昏迷在花园。",
+      "occur_chapter": 8,
+      "reveal_chapter": 8,
+      "involved": [
+        181,
+        182,
+        183,
+        184
+      ]
+    },
+    {
+      "id": 194,
+      "description": "哈瑟利向福尔摩斯和华生讲述遭遇，福尔摩斯从剪报中找出杰里迈亚·海林失踪案，推断出罪犯窝点位置。",
+      "occur_chapter": 8,
+      "reveal_chapter": 8,
+      "involved": [
+        181,
+        1,
+        2
+      ]
+    },
+    {
+      "id": 195,
+      "description": "福尔摩斯、华生、布拉德斯特里特探长等人前往艾福德抓捕，却发现目标房屋起火，莱桑德·斯塔克一伙逃脱。",
+      "occur_chapter": 8,
+      "reveal_chapter": 8,
+      "involved": [
+        1,
+        2,
+        111,
+        181
+      ]
+    },
+    {
+      "id": 196,
+      "description": "福尔摩斯、华生和哈瑟利赶到假币厂火灾现场。",
+      "occur_chapter": 8,
+      "reveal_chapter": 8,
+      "involved": [
+        1,
+        2,
+        181
+      ]
+    },
+    {
+      "id": 197,
+      "description": "消防员在假币厂发现断指和伪造硬币的机器。",
+      "occur_chapter": 8,
+      "reveal_chapter": 8,
+      "involved": [
+        1,
+        181
+      ]
+    },
+    {
+      "id": 198,
+      "description": "农民遇见载有罪犯和箱子的马车朝雷丁方向驶去。",
+      "occur_chapter": 8,
+      "reveal_chapter": 8,
+      "involved": [
+        182,
+        184,
+        183
+      ]
+    },
+    {
+      "id": 199,
+      "description": "福尔摩斯根据脚印推断哈瑟利被两人抬走，其中一人脚印小，另一人脚印大。",
+      "occur_chapter": 8,
+      "reveal_chapter": 8,
+      "involved": [
+        1,
+        181,
+        184,
+        183
+      ]
+    },
+    {
+      "id": 217,
+      "description": "罗伯特·圣西蒙勋爵与哈蒂·多兰在圣乔治教堂举行婚礼，参加者包括双方亲属。",
+      "occur_chapter": 9,
+      "reveal_chapter": 9,
+      "involved": [
+        200,
+        201,
+        204,
+        206,
+        207,
+        208,
+        209,
+        210
+      ]
+    },
+    {
+      "id": 218,
+      "description": "弗洛拉·米勒在婚礼后闯入多兰先生宅邸，声称对圣西蒙勋爵有权利，被驱逐。",
+      "occur_chapter": 9,
+      "reveal_chapter": 9,
+      "involved": [
+        202,
+        200
+      ]
+    },
+    {
+      "id": 219,
+      "description": "婚宴上，哈蒂·多兰看到旧情人弗朗西斯·海·莫尔顿的信号，假装不适回房，换上便装离开，与莫尔顿会合后前往戈登广场。",
+      "occur_chapter": 9,
+      "reveal_chapter": 9,
+      "involved": [
+        201,
+        203,
+        51,
+        202
+      ]
+    },
+    {
+      "id": 220,
+      "description": "莱斯特雷德在蛇形湖打捞出哈蒂的婚纱、鞋子和花环，并在衣物中发现弗洛拉·米勒留下的字条，怀疑其诱骗哈蒂。",
+      "occur_chapter": 9,
+      "reveal_chapter": 9,
+      "involved": [
+        52,
+        202
+      ]
+    },
+    {
+      "id": 221,
+      "description": "夏洛克·福尔摩斯通过推理找到莫尔顿夫妇在戈登广场的住处，带他们与圣西蒙勋爵和解，揭开真相。",
+      "occur_chapter": 9,
+      "reveal_chapter": 9,
+      "involved": [
+        1,
+        203,
+        201,
+        200
+      ]
+    },
+    {
+      "id": 222,
+      "description": "福尔摩斯通过旅馆账单线索找到弗朗西斯·海·莫尔顿与哈蒂·多兰，并邀请他们到贝克街与圣西蒙勋爵会面。",
+      "occur_chapter": 9,
+      "reveal_chapter": 9,
+      "involved": [
+        1,
+        203,
+        201,
+        200
+      ]
+    },
+    {
+      "id": 236,
+      "description": "亚历山大·霍尔德将客户抵押的绿玉王冠带回家中，夜间王冠被损坏，三颗绿玉宝石失踪，阿瑟·霍尔德被发现手持王冠，被误认为窃贼。",
+      "occur_chapter": 10,
+      "reveal_chapter": 10,
+      "involved": [
+        223,
+        224,
+        225,
+        226
+      ]
+    },
+    {
+      "id": 237,
+      "description": "福尔摩斯调查并揭露真相：玛丽与乔治·伯恩韦尔合谋偷窃宝石，并从乔治·伯恩韦尔处找回宝石。",
+      "occur_chapter": 10,
+      "reveal_chapter": 10,
+      "involved": [
+        1,
+        223,
+        226
+      ]
+    },
+    {
+      "id": 238,
+      "description": "玛丽·霍尔德留下便条与乔治·伯恩韦尔爵士私奔。",
+      "occur_chapter": 10,
+      "reveal_chapter": 10,
+      "involved": [
+        225,
+        226
+      ]
+    },
+    {
+      "id": 242,
+      "description": "阿瑟目睹玛丽偷冠冕给乔治，追出搏斗夺回。",
+      "occur_chapter": 9,
+      "reveal_chapter": 10,
+      "involved": [
+        224,
+        225,
+        226
+      ]
+    },
+    {
+      "id": 243,
+      "description": "福尔摩斯调查雪地脚印，伪装流浪汉获取证据，赎回宝石破案。",
+      "occur_chapter": 9,
+      "reveal_chapter": 10,
+      "involved": [
+        1,
+        226
+      ]
+    },
+    {
+      "id": 261,
+      "description": "维奥莱特·亨特接受杰弗罗·鲁卡斯尔的工作邀请，条件包括剪短头发、穿电光蓝裙子、坐在客厅窗边等，年薪120英镑。",
+      "occur_chapter": 11,
+      "reveal_chapter": 11,
+      "involved": [
+        244,
+        245,
+        246
+      ]
+    },
+    {
+      "id": 262,
+      "description": "维奥莱特在客厅窗边表演时，发现路上有一名蓄须男子在观察她，福尔摩斯后来推断该男子是爱丽丝的恋人，被表演误导以为爱丽丝快乐。",
+      "occur_chapter": 11,
+      "reveal_chapter": 11,
+      "involved": [
+        244,
+        245,
+        252
+      ]
+    },
+    {
+      "id": 263,
+      "description": "维奥莱特在抽屉里发现一束与她剪下的头发完全相同的神秘发束，疑为爱丽丝的头发。",
+      "occur_chapter": 11,
+      "reveal_chapter": 11,
+      "involved": [
+        244
+      ]
+    },
+    {
+      "id": 264,
+      "description": "维奥莱特闯入锁着的侧楼房间，听到里面有脚步声和影子，但被杰弗罗·鲁卡斯尔拦住并威胁若再进入就放狗咬她。",
+      "occur_chapter": 11,
+      "reveal_chapter": 11,
+      "involved": [
+        244,
+        245
+      ]
+    },
+    {
+      "id": 265,
+      "description": "维奥莱特深夜看到一条巨犬在庭院中巡逻，作为防止外人接近的哨兵。",
+      "occur_chapter": 11,
+      "reveal_chapter": 11,
+      "involved": [
+        244,
+        248
+      ]
+    },
+    {
+      "id": 267,
+      "description": "维奥莱特向福尔摩斯求助，福尔摩斯推断她被雇来冒充被囚禁的爱丽丝·鲁卡斯尔，并计划夜探铜山毛榉。",
+      "occur_chapter": 11,
+      "reveal_chapter": 11,
+      "involved": [
+        244,
+        266,
+        2
+      ]
+    },
+    {
+      "id": 268,
+      "description": "福尔摩斯、华生与维奥莱特在晚上七点潜入侧楼房间，发现囚室已空，爱丽丝可能已被转移。",
+      "occur_chapter": 11,
+      "reveal_chapter": 11,
+      "involved": [
+        266,
+        2,
+        244,
+        245
+      ]
+    },
+    {
+      "id": 273,
+      "description": "福尔摩斯和华生欲救出亨特小姐，鲁卡斯尔放出猎犬，但猎犬反噬咬伤鲁卡斯尔，被迫击毙猎犬",
+      "occur_chapter": 11,
+      "reveal_chapter": 11,
+      "involved": [
+        1,
+        2,
+        244,
+        245,
+        248
+      ]
+    },
+    {
+      "id": 274,
+      "description": "福勒先生和鲁卡斯尔小姐在南安普敦凭特别许可证结婚",
+      "occur_chapter": 10,
+      "reveal_chapter": 11,
+      "involved": [
+        269,
+        251
+      ]
+    }
+  ]
+}
